@@ -1,0 +1,16 @@
+class_name: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver
+        - Helper\Acceptance
+        - Asserts
+
+
+    config:
+        WebDriver:
+            url: 'https://olaf.contentanalyticsinc.com'
+            browser: chrome
+            window_size: maximize
+
+
+

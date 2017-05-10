@@ -1,0 +1,5 @@
+Server_hostname, Date_time, Dashboard_time, Content_health_time, Product_list_time, Insight_report_time, Total_time, Status
+Educationalinsights1,2017-05-10 11:05:02,4.49,1.66,2.04,2.22,10.41,success;
+Elsa7,2017-05-10 11:05:28,2.42,8.13,3.37,2.63,16.55,success;
+Educationalinsights1,2017-05-10 11:08:08,3.2,1.62,2.37,1.91,9.1,success;
+Elsa7,2017-05-10 11:08:32,1.95,8.23,3.09,2.94,16.21,success;

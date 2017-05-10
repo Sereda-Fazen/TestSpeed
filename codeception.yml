@@ -1,0 +1,40 @@
+actor: Tester
+paths:
+    tests: tests
+    log: tests/_output
+    data: tests/_data
+    helpers: tests/helpers
+    support: tests/_support
+    envs: tests/_envscode
+    reports: tests/_output
+settings:
+    bootstrap: _bootstrap.php
+    suite_class: \PHPUnit_Framework_TestSuite
+    colors: true
+    memory_limit: 1024M
+    strict_xml: true
+
+
+extensions:
+
+   enabled:
+        - Codeception\Extension\RunFailed
+       # - Codeception\Extension\Recorder
+        #- BookIt\Codeception\TestRail\Extension
+   config:
+        Codeception\Extension\Recorder:
+          delete_successful: false
+        BookIt\Codeception\TestRail\Extension:
+          enabled: true                 # When false, don't communicate with TestRail (optional; default: true)
+          user: 'vb@colmartech.com'       # A TestRail user (required)
+          apikey: 'gwIc9omalfEmZ8QsrZI3-tKoyMh1Ph8zugmbint9o'              # A TestRail API Key (required)
+          url: 'https://mdgo.testrail.com'
+          project: 1                  # TestRail Project ID (required)
+
+modules:
+    config:
+        Db:
+            dsn: ''
+            user: ''
+            password: ''
+            dump: tests/_data/dump.sql
