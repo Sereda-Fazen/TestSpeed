@@ -114,22 +114,30 @@ class Acceptance extends \Codeception\Module
         }
     }
 */
-    public function writtenDate($host,$dashboard,$content,$product_list,$insight_report,$error)
+    public function writtenDate($host,$dashboard,$content,$product_list,$insight_report)
     {
-        $file = '../TestSpeedPages/servers/Stages.csv';
+        $file = '../tests/servers/Stages.csv';
         $total_time = $dashboard + $content + $product_list + $insight_report;
         $current = file_get_contents($file);
         $date = date("Y-m-d H:i:s");
 
-        
+
         $current .= "$host,";
         $current .= "$date,";
         $current .= "$dashboard,";
         $current .= "$content,";
         $current .= "$product_list,";
         $current .= "$insight_report,";
-        $current .= "$total_time,";
-        $current .= "$error;\n";
+        $current .= "$total_time;\n";
+        file_put_contents($file, $current);
+    }
+
+    public function errorData($error)
+    {
+        $file = '../tests/servers/Stages.csv';
+        $current = file_get_contents($file);
+
+        $current .= "$error";
         file_put_contents($file, $current);
     }
 
