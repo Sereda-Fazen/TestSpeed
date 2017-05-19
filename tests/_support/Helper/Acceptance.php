@@ -116,7 +116,7 @@ class Acceptance extends \Codeception\Module
 */
     public function writtenDate($host,$dashboard,$content,$product_list,$insight_report)
     {
-        $file = '../tests/servers/Stages.csv';
+        $file = '../Test/servers/Stages.csv';
         $total_time = $dashboard + $content + $product_list + $insight_report;
         $current = file_get_contents($file);
         $date = date("Y-m-d H:i:s");
