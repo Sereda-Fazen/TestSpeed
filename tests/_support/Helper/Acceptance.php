@@ -134,7 +134,7 @@ class Acceptance extends \Codeception\Module
 
     public function errorData($error)
     {
-        $file = '../tests/servers/Stages.csv';
+        $file = '../Test/servers/Stages.csv';
         $current = file_get_contents($file);
 
         $current .= "$error";
