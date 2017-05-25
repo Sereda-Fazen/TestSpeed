@@ -8,9 +8,9 @@ use \Step\Acceptance;
 class SpeedAlyticsincCest
 {
 
-    function cheyenne(\Step\Acceptance\AccountSteps $I)
+    function thandwalton(\Step\Acceptance\AccountSteps $I)
     {
-        $I->stepsSpeedTest('http://cheyenne.contentanalyticsinc.com', 'Cheyenne');
+        $I->stepsSpeedTest('http://8thandwalton.contentanalyticsinc.com','Eightthandwalton');
     }
 
 
