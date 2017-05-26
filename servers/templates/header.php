@@ -28,7 +28,7 @@
 </head>
 <body>
 
-<table  border="1"  cellpadding="5" cellspacing="0" style="margin:0; padding:0; border-color:#d2d9ff;">
+<table  border="1"  cellpadding="5" cellspacing="0" width="100%" style="margin:0; padding:0; border-color:#d2d9ff;">
     <thead  bgcolor="#f9fcff">
     <tr>
         <th>Status</th>
