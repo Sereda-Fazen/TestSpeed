@@ -7,7 +7,7 @@ use \Step\Acceptance;
  */
 class StagesCest
 {
-    
+
     function test (\Helper\Acceptance $I){
         $I->html_header();
     }
