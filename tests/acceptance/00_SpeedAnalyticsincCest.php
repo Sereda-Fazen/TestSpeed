@@ -11,11 +11,11 @@ class SpeedAlyticsincCest
     function test (\Helper\Acceptance $I){
         $I->html_header();
     }
-    
-    function walmartFurniture(\Step\Acceptance\AccountSteps $I)
-    {
-        $I->stepsSpeedTest('http://walmart-furniture.contentanalyticsinc.com','Walmart-furniture');
-    }
+
+    function thandwalton(\Step\Acceptance\AccountSteps $I)
+        {
+            $I->stepsSpeedTest('http://8thandwalton.contentanalyticsinc.com','Eightthandwalton');
+        }
 
     function footer (\Helper\Acceptance $I){
         $I->html_footer();

@@ -1,6 +1,7 @@
 actor: Tester
 paths:
     tests: tests
+    log: tests/_output
     data: tests/_data
     helpers: tests/helpers
     support: tests/_support

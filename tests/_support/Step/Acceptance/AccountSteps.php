@@ -19,22 +19,22 @@ class AccountSteps extends \AcceptanceTester
 
         $start = microtime(true);
         $I->amOnPage('/dashboard');
-        $I->waitForJS("return jQuery.active == 0;", 120);
+        $I->waitForJS("return jQuery.active == 0;", 1200);
         $dashboard = round((microtime(true) - $start), 2);
         
         $start = microtime(true);
         $I->amOnPage('/assess/products');
-        $I->waitForJS("return jQuery.active == 0;", 120);
+        $I->waitForJS("return jQuery.active == 0;", 1200);
         $content = round((microtime(true) - $start), 2);
         
         $start = microtime(true);
         $I->amOnPage('/assess/brand_report_ranking');
-        $I->waitForJS("return jQuery.active == 0;", 120);
+        $I->waitForJS("return jQuery.active == 0;", 1200);
         $insight = round((microtime(true) - $start), 2);
 
         $start = microtime(true);
         $I->amOnPage('/item_setup/manage');
-        $I->waitForJS("return jQuery.active == 0;", 120);
+        $I->waitForJS("return jQuery.active == 0;", 1200);
         $product = round((microtime(true) - $start), 2);
 
         
