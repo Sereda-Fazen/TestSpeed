@@ -11,6 +11,7 @@ modules:
             url: 'https://olaf.contentanalyticsinc.com'
             browser: chrome
             window_size: maximize
+            clear_cookies: true
 
 
 

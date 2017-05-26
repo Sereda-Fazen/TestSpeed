@@ -7,7 +7,11 @@ use \Step\Acceptance;
  */
 class StagesCest
 {
-
+    
+    function test (\Helper\Acceptance $I){
+        $I->html_header();
+    }
+    
     function walmartFurniture(\Step\Acceptance\AccountSteps $I)
     {
         $I->stepsSpeedTest('http://walmart-furniture.contentanalyticsinc.com','Walmart-furniture');
@@ -652,6 +656,10 @@ class StagesCest
     function nonnis(\Step\Acceptance\AccountSteps $I)
     {
         $I->stepsSpeedTest('http://nonnis.contentanalyticsinc.com', 'Nonnis');
+    }
+
+    function footer (\Helper\Acceptance $I){
+        $I->html_footer();
     }
 
 }

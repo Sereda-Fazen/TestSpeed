@@ -39,11 +39,11 @@ class AccountSteps extends \AcceptanceTester
 
         
         if ($product > 5 || $content > 5 || $insight > 5 || $dashboard > 5){
-            $I->errorData('Load is too long, ');
+            $I->errorData('Load is too long');
         } else {
-            $I->errorData('Success, ');
+            $I->errorData('Success');
         }
-
+        
         $I->writtenDate($pass,$dashboard,$content,$insight,$product);
 
 
