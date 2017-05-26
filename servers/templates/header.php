@@ -28,10 +28,10 @@
 </head>
 <body>
 
-<table border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0; width: 100%; text-align: center;">
-    <thead>
+<table  border="1"  cellpadding="5" cellspacing="0" style="margin:0; padding:0; border-color:#d2d9ff;">
+    <thead  bgcolor="#f9fcff">
     <tr>
-        <th>Status</th>        
+        <th>Status</th>
         <th>Server_hostname</th>
         <th>Date_time</th>
         <th>Dashboard_time</th>
