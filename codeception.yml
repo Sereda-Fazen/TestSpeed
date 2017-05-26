@@ -1,12 +1,10 @@
 actor: Tester
 paths:
     tests: tests
-    log: tests/_output
     data: tests/_data
     helpers: tests/helpers
     support: tests/_support
     envs: tests/_envscode
-    reports: tests/_output
 settings:
     bootstrap: _bootstrap.php
     suite_class: \PHPUnit_Framework_TestSuite
