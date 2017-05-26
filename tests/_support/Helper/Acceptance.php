@@ -168,7 +168,7 @@ class Acceptance extends \Codeception\Module
      
 
     public function errorData($error)
-        
+
     {
 //        $file = '../Test/servers/Stages.csv';
         $file = '../Test/servers/table.html';
