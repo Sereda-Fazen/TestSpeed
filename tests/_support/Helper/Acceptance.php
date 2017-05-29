@@ -80,10 +80,10 @@ class Acceptance extends \Codeception\Module
     }
 
     /**
-    * seeImage : проверяет отображение картинки методом проверки реального размера изображения
-    * @param  string $element : XPath или CSS локатор
-    * @param  string $cssValue : минимальные размер по X и Y
-    **/
+     * seeImage : проверяет отображение картинки методом проверки реального размера изображения
+     * @param  string $element : XPath или CSS локатор
+     * @param  string $cssValue : минимальные размер по X и Y
+     **/
 
     public function seeImage($element, $minSizeXY = 10) {
         $wb = $this->getModule('WebDriver');
@@ -99,83 +99,83 @@ class Acceptance extends \Codeception\Module
         $wait->click($locator);
     }
 
-/*
-    public function _failed(TestInterface $test, $fail)
-    {
-        $wd = $this->getModule('WebDriver');
-        $bv = $wd->_getConfig('browser');
-        $wd->debugWebDriverLogs();
-        $fileName = preg_replace('~/W~', '.', Descriptor::getTestSignature($test));
-        $outputDir = codecept_output_dir();
-        if (!$outputDir . $bv) {
-            mkdir($outputDir . $bv.date(" - F j, Y, g:i a"), 0777, true);
-            $wd->_saveScreenshot($outputDir . $bv.date(" - F j, Y, g:i a"). '/' . mb_strcut($bv . '-' . $fileName,
-                            0, 245, 'utf-8') . ' - ' . date("F j, Y, g:i a") . '.fail.png');
+    /*
+        public function _failed(TestInterface $test, $fail)
+        {
+            $wd = $this->getModule('WebDriver');
+            $bv = $wd->_getConfig('browser');
+            $wd->debugWebDriverLogs();
+            $fileName = preg_replace('~/W~', '.', Descriptor::getTestSignature($test));
+            $outputDir = codecept_output_dir();
+            if (!$outputDir . $bv) {
+                mkdir($outputDir . $bv.date(" - F j, Y, g:i a"), 0777, true);
+                $wd->_saveScreenshot($outputDir . $bv.date(" - F j, Y, g:i a"). '/' . mb_strcut($bv . '-' . $fileName,
+                                0, 245, 'utf-8') . ' - ' . date("F j, Y, g:i a") . '.fail.png');
+            }
         }
-    }
-*/
+    */
     public function html_header(){
-        $headerFile = '../Test/servers/templates/header.php';
-        $file = '../Test/servers/table.html';
+        $headerFile = '../TestSpeedPages/servers/templates/header.php';
+        $file = '../TestSpeedPages/servers/table.html';
         $header = file_get_contents($headerFile);
-        
+
         file_put_contents($file, $header);
     }
-    
-    
-    
+
+
+
     public function writtenDate($host,$dashboard,$content,$product_list,$insight_report)
     {
 //        $file = '../Test/servers/Stages.csv';
-        $file = '../Test/servers/table.html';
+        $file = '../Test/servers/Stages.xls';
         $total_time = $dashboard + $content + $product_list + $insight_report;
         $current = file_get_contents($file);
         $date = date("Y-m-d H:i:s");
 
 //
-//        $current .= "$host,";
-//        $current .= "$date,";
-//        $current .= "$dashboard,";
-//        $current .= "$content,";
-//        $current .= "$product_list,";
-//        $current .= "$insight_report,";
-//        $current .= "$total_time;\n";
-//        file_put_contents($file, $current);
-
-
-        $current .= "<td>$host</td>";
-        $current .= "<td>$date</td>";
-        $current .= "<td>$dashboard</td>";
-        $current .= "<td>$content</td>";
-        $current .= "<td>$product_list</td>";
-        $current .= "<td>$insight_report</td>";
-        $current .= "<td>$total_time</td>";
-        $current .= "</tr>";
-        
+        $current .= "$host,";
+        $current .= "$date,";
+        $current .= "$dashboard,";
+        $current .= "$content,";
+        $current .= "$product_list,";
+        $current .= "$insight_report,";
+        $current .= "$total_time;\n";
         file_put_contents($file, $current);
+
+
+//        $current .= "<td>$host</td>";
+//        $current .= "<td>$date</td>";
+//        $current .= "<td>$dashboard</td>";
+//        $current .= "<td>$content</td>";
+//        $current .= "<td>$product_list</td>";
+//        $current .= "<td>$insight_report</td>";
+//        $current .= "<td>$total_time</td>";
+//        $current .= "</tr>";
+
+        file_put_contents($file, $current);
+
 
     }
 
     public function html_footer(){
-        $footerFile = '../Test/servers/templates/footer.php';
-        $file = '../Test/servers/table.html';
+        $footerFile = '../TestSpeedPages/servers/templates/footer.php';
+        $file = '../TestSpeedPages/servers/table.html';
         $footer = file_get_contents($footerFile);
         $current = file_get_contents($file);
-        
+
         file_put_contents($file, $current.$footer);
     }
-    
-     
+
+
 
     public function errorData($error)
-
     {
 //        $file = '../Test/servers/Stages.csv';
-        $file = '../Test/servers/table.html';
+        $file = '../Test/servers/Stages.xls';
         $current = file_get_contents($file);
 
-        $current .= "<tr>";
-        $current .= "<td>$error</td>";
+        $current .= "";
+        $current .= $error;
         file_put_contents($file, $current);
     }
 
