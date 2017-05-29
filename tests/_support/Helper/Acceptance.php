@@ -115,8 +115,8 @@ class Acceptance extends \Codeception\Module
     }
 */
     public function html_header(){
-        $headerFile = '../TestSpeed/servers/templates/header.php';
-        $file = '../TestSpeed/servers/table.html';
+        $headerFile = '../Test/servers/templates/header.php';
+        $file = '../Test/servers/table.html';
         $header = file_get_contents($headerFile);
         
         file_put_contents($file, $header);
@@ -127,7 +127,7 @@ class Acceptance extends \Codeception\Module
     public function writtenDate($host,$dashboard,$content,$product_list,$insight_report)
     {
 //        $file = '../Test/servers/Stages.csv';
-        $file = '../TestSpeed/servers/table.html';
+        $file = '../Test/servers/table.html';
         $total_time = $dashboard + $content + $product_list + $insight_report;
         $current = file_get_contents($file);
         $date = date("Y-m-d H:i:s");
@@ -157,8 +157,8 @@ class Acceptance extends \Codeception\Module
     }
 
     public function html_footer(){
-        $footerFile = '../TestSpeed/servers/templates/footer.php';
-        $file = '../TestSpeed/servers/table.html';
+        $footerFile = '../Test/servers/templates/footer.php';
+        $file = '../Test/servers/table.html';
         $footer = file_get_contents($footerFile);
         $current = file_get_contents($file);
         
@@ -171,7 +171,7 @@ class Acceptance extends \Codeception\Module
 
     {
 //        $file = '../Test/servers/Stages.csv';
-        $file = '../TestSpeed/servers/table.html';
+        $file = '../Test/servers/table.html';
         $current = file_get_contents($file);
 
         $current .= "<tr>";
