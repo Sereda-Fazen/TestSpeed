@@ -8,13 +8,10 @@ use \Step\Acceptance;
 class SpeedAlyticsincCest
 {
 
-
-
-    function wmMay2(\Step\Acceptance\AccountSteps $I)
+    function walmartFurniture(\Step\Acceptance\AccountSteps $I)
     {
-        $I->stepsSpeedTest('http://wm-may2.contentanalyticsinc.com','Wm-may2');
+        $I->stepsSpeedTest('http://walmart-furniture.contentanalyticsinc.com','Walmart-furniture');
     }
-
 
 
 }
