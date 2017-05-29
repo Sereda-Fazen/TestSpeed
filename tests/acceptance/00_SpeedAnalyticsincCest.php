@@ -8,18 +8,14 @@ use \Step\Acceptance;
 class SpeedAlyticsincCest
 {
 
-    function test (\Helper\Acceptance $I){
-        $I->html_header();
+
+
+    function wmMay2(\Step\Acceptance\AccountSteps $I)
+    {
+        $I->stepsSpeedTest('http://wm-may2.contentanalyticsinc.com','Wm-may2');
     }
 
-    function thandwalton(\Step\Acceptance\AccountSteps $I)
-        {
-            $I->stepsSpeedTest('http://8thandwalton.contentanalyticsinc.com','Eightthandwalton');
-        }
 
-    function footer (\Helper\Acceptance $I){
-        $I->html_footer();
-    }
 
 }
 

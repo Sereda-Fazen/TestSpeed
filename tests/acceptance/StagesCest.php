@@ -115,15 +115,9 @@ class StagesCest
         $I->stepsSpeedTest('http://energizer.contentanalyticsinc.com', 'Energizer');
     }
 
-
     function enjoylife(\Step\Acceptance\AccountSteps $I)
     {
         $I->stepsSpeedTest('http://enjoylife.contentanalyticsinc.com','Enjoylife');
-    }
-
-    function myaSales(\Step\Acceptance\AccountSteps $I)
-    {
-        $I->stepsSpeedTest('http://mya-sales.contentanalyticsinc.com','Mya-sales');
     }
 
     function michaelSales(\Step\Acceptance\AccountSteps $I)
