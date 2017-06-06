@@ -14,4 +14,324 @@ modules:
             clear_cookies: true
 
 
+env:
+
+  walmart-furniture:
+            url: 'http://walmart-furniture.contentanalyticsinc.com'
+
+  8thandwalton:
+            url: 'http://8thandwalton.contentanalyticsinc.com'
+
+  acosta:
+            url: 'http://acosta.contentanalyticsinc.com'
+
+  americantextile:
+            url: 'http://americantextile.contentanalyticsinc.com'
+  bdub:
+            url: 'http://bdub.contentanalyticsinc.com'
+
+  bemis:
+            url: 'http://bemis.contentanalyticsinc.com'
+  bic:
+            url: 'http://bic.contentanalyticsinc.com'
+
+  brother:
+            url: 'http://brother.contentanalyticsinc.com'
+  cars:
+            url: 'http://cars.contentanalyticsinc.com'
+
+  cheyenne:
+            url: 'http://cheyenne.contentanalyticsinc.com'
+  coleman:
+            url: 'http://coleman.contentanalyticsinc.com'
+
+  colgate:
+            url: 'http://colgate.contentanalyticsinc.com'
+  crayola:
+            url: 'http://crayola.contentanalyticsinc.com'
+
+  badgerbasket:
+            url: 'http://badgerbasket.contentanalyticsinc.com'
+  crazart:
+            url: 'http://crazart.contentanalyticsinc.com'
+
+  david:
+            url: 'http://david.contentanalyticsinc.com'
+  dole:
+            url: 'http://dole.contentanalyticsinc.com'
+
+  educationalinsights:
+            url: 'http://educationalinsights.contentanalyticsinc.com'
+  emerson:
+            url: 'http://emerson.contentanalyticsinc.com'
+
+  energizer:
+            url: 'http://energizer.contentanalyticsinc.com'
+  enjoylife:
+            url: 'http://enjoylife.contentanalyticsinc.com'
+
+  michael-sales:
+            url: 'http://michael-sales.contentanalyticsinc.com'
+  groupm:
+            url: 'http://groupm.contentanalyticsinc.com'
+
+
+  handcraft:
+            url: 'http://handcraft.contentanalyticsinc.com'
+  hormel:
+            url: 'http://hormel.contentanalyticsinc.com'
+
+  hostess:
+            url: 'http://hostess.contentanalyticsinc.com'
+  ideanuova:
+            url: 'http://ideanuova.contentanalyticsinc.com'
+
+  jedi:
+            url: 'http://jedi.contentanalyticsinc.com'
+  justplay:
+            url: 'http://justplay.contentanalyticsinc.com'
+
+  kimberlyclark:
+            url: 'http://kimberlyclark.contentanalyticsinc.com'
+  knex:
+            url: 'http://knex.contentanalyticsinc.com'
+
+  lego:
+            url: 'http://lego.contentanalyticsinc.com'
+  sales-peggy:
+            url: 'http://sales-peggy.contentanalyticsinc.com'
+
+  sales-brian:
+            url: 'http://sales-brian.contentanalyticsinc.com'
+  sales-daveb:
+            url: 'http://sales-daveb.contentanalyticsinc.com'
+
+  levis:
+            url: 'http://levis.contentanalyticsinc.com'
+  levis1:
+            url: 'http://levis1.contentanalyticsinc.com'
+
+  pepsico-test:
+            url: 'http://pepsico-test.contentanalyticsinc.com'
+  pepsico-demo:
+            url: 'http://pepsico-demo.contentanalyticsinc.com'
+
+  loreal:
+            url: 'http://loreal.contentanalyticsinc.com'
+  mattel:
+            url: 'http://mattel.contentanalyticsinc.com'
+
+  meadjohnson:
+            url: 'http://meadjohnson.contentanalyticsinc.com'
+  merchants:
+            url: 'http://merchants.contentanalyticsinc.com'
+
+  monthly-dash:
+            url: 'http://monthly-dash.contentanalyticsinc.com'
+  moscoe:
+            url: 'http://moscoe.contentanalyticsinc.com'
+
+  newellco:
+            url: 'http://newellco.contentanalyticsinc.com'
+  nourison:
+            url: 'http://nourison.contentanalyticsinc.com'
+
+  pg-jet:
+            url: 'http://pg-jet.contentanalyticsinc.com'
+  pg-omni:
+            url: 'http://pg-omni.contentanalyticsinc.com'
+
+  parispresents:
+            url: 'http://parispresents.contentanalyticsinc.com'
+  pepsico:
+            url: 'http://pepsico.contentanalyticsinc.com'
+
+  pfizer:
+            url: 'http://pfizer.contentanalyticsinc.com'
+  pg:
+            url: 'http://pg.contentanalyticsinc.com'
+
+  retailer-demo:
+            url: 'http://retailer-demo.contentanalyticsinc.com'
+
+  retail-link:
+            url: 'http://retail-link.contentanalyticsinc.com'
+
+  richcontext:
+            url: 'http://richcontext.contentanalyticsinc.com'
+
+  rockstar:
+            url: 'http://rockstar.contentanalyticsinc.com'
+  samsclub:
+            url: 'http://samsclub.contentanalyticsinc.com'
+
+  samsung:
+            url: 'http://samsung.contentanalyticsinc.com'
+  shell:
+            url: 'http://shell.contentanalyticsinc.com'
+
+  shurtech:
+            url: 'http://shurtech.contentanalyticsinc.com'
+  silver:
+            url: 'http://silver.contentanalyticsinc.com'
+
+  smuckers:
+            url: 'http://smuckers.contentanalyticsinc.com'
+  southshore:
+            url: 'http://southshore.contentanalyticsinc.com'
+
+  tcc:
+            url: 'http://tcc.contentanalyticsinc.com'
+  triad:
+            url: 'http://triad.contentanalyticsinc.com'
+
+  tracfone:
+            url: 'http://tracfone.contentanalyticsinc.com'
+  valvoline:
+            url: 'http://valvoline.contentanalyticsinc.com'
+
+  walkeredison:
+            url: 'http://walkeredison.contentanalyticsinc.com'
+  walmart-content:
+            url: 'http://walmart-content.contentanalyticsinc.com'
+
+  walmart-catalog:
+            url: 'http://walmart-catalog.contentanalyticsinc.com'
+  walmart-editing:
+            url: 'http://walmart-editing.contentanalyticsinc.com'
+
+  walmart-insights:
+            url: 'http://walmart-insights.contentanalyticsinc.com'
+  walmart:
+            url: 'http://walmart.contentanalyticsinc.com'
+
+  whalen:
+            url: 'http://whalen.contentanalyticsinc.com'
+  whitewave:
+            url: 'http://whitewave.contentanalyticsinc.com'
+
+  whytespyder:
+            url: 'http://whytespyder.contentanalyticsinc.com'
+  wm-mp:
+            url: 'http://wm-mp.contentanalyticsinc.com'
+
+  wm-ondemand:
+            url: 'http://wm-ondemand.contentanalyticsinc.com'
+  jet:
+            url: 'http://jet.contentanalyticsinc.com'
+
+  steve-test:
+            url: 'http://steve-test.contentanalyticsinc.com'
+  mondelez:
+            url: 'http://mondelez.contentanalyticsinc.com'
+
+
+  thewhistler-group:
+            url: 'http://thewhistler-group.contentanalyticsinc.com'
+  waterpik:
+            url: 'http://waterpik.contentanalyticsinc.com'
+
+  samsung-amazon:
+            url: 'http://samsung-amazon.contentanalyticsinc.com'
+  reach:
+            url: 'http://reach.contentanalyticsinc.com'
+
+  shoebuy:
+            url: 'http://shoebuy.contentanalyticsinc.com'
+  moosejaw:
+            url: 'http://moosejaw.contentanalyticsinc.com'
+
+  wm-may1:
+            url: 'http://wm-may1.contentanalyticsinc.com'
+  wm-may2:
+            url: 'http://wm-may2.contentanalyticsinc.com'
+
+  wm-mpmay1:
+            url: 'http://wm-mpmay1.contentanalyticsinc.com'
+  tyson:
+            url: 'http://tyson.contentanalyticsinc.com'
+
+  intradeco:
+            url: 'http://intradeco.contentanalyticsinc.com'
+  possible:
+            url: 'http://possible.contentanalyticsinc.com'
+
+  wm-mpmay2:
+            url: 'http://wm-mpmay2.contentanalyticsinc.com'
+  wm-mpmay3:
+            url: 'http://wm-mpmay3.contentanalyticsinc.com'
+
+  wm-mpmay4:
+            url: 'http://wm-mpmay4.contentanalyticsinc.com'
+  wm-mpmay5:
+            url: 'http://wm-mpmay5.contentanalyticsinc.com'
+
+  snyderslance:
+            url: 'http://snyderslance.contentanalyticsinc.com'
+  sauder:
+            url: 'http://sauder.contentanalyticsinc.com'
+
+  mondelez-test:
+            url: 'http://mondelez-test.contentanalyticsinc.com'
+  mondelez-global:
+            url: 'http://mondelez-global.contentanalyticsinc.com'
+
+  buffalo-tools:
+            url: 'http://buffalo-tools.contentanalyticsinc.com'
+  atkins:
+            url: 'http://atkins.contentanalyticsinc.com'
+
+  bazaarvoice:
+            url: 'http://bazaarvoice.contentanalyticsinc.com'
+  educationalinsights1:
+            url: 'http://educationalinsights1.contentanalyticsinc.com'
+
+  samsclub-traffic:
+            url: 'http://samsclub-traffic.contentanalyticsinc.com'
+  wm-april1:
+            url: 'http://wm-april1.contentanalyticsinc.com'
+
+  wm-april2:
+            url: 'http://wm-april2.contentanalyticsinc.com'
+  wm-mpapril1:
+            url: 'http://wm-mpapril1.contentanalyticsinc.com'
+
+  wm-mpapril2:
+            url: 'http://wm-mpapril2.contentanalyticsinc.com'
+  wm-mpapril3:
+            url: 'http://wm-mpapril3.contentanalyticsinc.com'
+
+  wm-mpapril4:
+            url: 'http://wm-mpapril4.contentanalyticsinc.com'
+  wm-mpapril5:
+            url: 'http://wm-mpapril5.contentanalyticsinc.com'
+
+  target:
+            url: 'http://target.contentanalyticsinc.com'
+  hollandersleep:
+            url: 'http://hollandersleep.contentanalyticsinc.com'
+
+  acosta2:
+            url: 'http://acosta2.contentanalyticsinc.com'
+  philips:
+            url: 'http://philips.contentanalyticsinc.com'
+
+  talkingrain:
+            url: 'http://talkingrain.contentanalyticsinc.com'
+  heineken:
+            url: 'http://heineken.contentanalyticsinc.com'
+
+  jacobsmarketing:
+            url: 'http://jacobsmarketing.contentanalyticsinc.com'
+  hayneedle:
+            url: 'http://hayneedle.contentanalyticsinc.com'
+
+  nonnis:
+            url: 'http://nonnis.contentanalyticsinc.com'
+
+
+
+
+
+
 
