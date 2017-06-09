@@ -114,57 +114,57 @@ class Acceptance extends \Codeception\Module
         }
     }
 */
-    public function html_header(){
-        $headerFile = '../Test_Param/servers/templates/header.php';
-        $file = '../Test_Param/servers/table.html';
-        $header = file_get_contents($headerFile);
-        
-        file_put_contents($file, $header);
-    }
-    
+//    public function html_header(){
+//        $headerFile = '../Test_Param/servers/templates/header.php';
+//        $file = '../Test_Param/servers/table.html';
+//        $header = file_get_contents($headerFile);
+//
+//        file_put_contents($file, $header);
+//    }
+
     
     
     public function writtenDate($host,$dashboard,$content,$product_list,$insight_report)
     {
 //        $file = '../Test/servers/Stages.csv';
-        $file = '../Test_Param/servers/table.html';
+        $file = '../Test_Param/servers/test.json';
         $total_time = $dashboard + $content + $product_list + $insight_report;
         $current = file_get_contents($file);
         $date = date("Y-m-d H:i:s");
 
 //
-//        $current .= "$host,";
-//        $current .= "$date,";
-//        $current .= "$dashboard,";
-//        $current .= "$content,";
-//        $current .= "$product_list,";
-//        $current .= "$insight_report,";
-//        $current .= "$total_time;\n";
+        $current .= "$host,";
+        $current .= "$date,";
+        $current .= "$dashboard,";
+        $current .= "$content,";
+        $current .= "$product_list,";
+        $current .= "$insight_report,";
+        $current .= "$total_time;\n";
+        json_decode($file, $current);
+
+
+//        $current .= "<td>$host</td>";
+//        $current .= "<td>$date</td>";
+//        $current .= "<td>$dashboard</td>";
+//        $current .= "<td>$content</td>";
+//        $current .= "<td>$product_list</td>";
+//        $current .= "<td>$insight_report</td>";
+//        $current .= "<td>$total_time</td>";
+//        $current .= "</tr>";
+//
 //        file_put_contents($file, $current);
 
-
-        $current .= "<td>$host</td>";
-        $current .= "<td>$date</td>";
-        $current .= "<td>$dashboard</td>";
-        $current .= "<td>$content</td>";
-        $current .= "<td>$product_list</td>";
-        $current .= "<td>$insight_report</td>";
-        $current .= "<td>$total_time</td>";
-        $current .= "</tr>";
-        
-        file_put_contents($file, $current);
-
     }
 
-    public function html_footer(){
-        $footerFile = '../Test_Param/servers/templates/footer.php';
-        $file = '../Test_Param/servers/table.html';
-        $footer = file_get_contents($footerFile);
-        $current = file_get_contents($file);
-        
-        file_put_contents($file, $current.$footer);
-    }
-    
+//    public function html_footer(){
+//        $footerFile = '../Test_Param/servers/templates/footer.php';
+//        $file = '../Test_Param/servers/table.html';
+//        $footer = file_get_contents($footerFile);
+//        $current = file_get_contents($file);
+//
+//        file_put_contents($file, $current.$footer);
+//    }
+
      
 
     public function errorData($error)
@@ -176,7 +176,7 @@ class Acceptance extends \Codeception\Module
 
         $current .= "<tr>";
         $current .= "<td>$error</td>";
-        file_put_contents($file, $current);
+        json_decode($file, $current);
     }
 
 
