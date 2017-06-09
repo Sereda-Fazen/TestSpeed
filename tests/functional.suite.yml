@@ -11,7 +11,6 @@ modules:
       - REST:
          depends: PhpBrowser
          url: 'http://172.17.0.1:9200/_cat/health'
-         auth: ['elastic', 'changeme']
          #curl:
          # CURLOPT_USERPWD: 'elastic:changeme'
       - \Helper\Functional
