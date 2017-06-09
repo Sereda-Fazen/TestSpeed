@@ -10,7 +10,7 @@ modules:
       # add framework module here
       - REST:
          depends: PhpBrowser
-         url: 'http://172.17.0.1:9200/_cat/health'
+         url: 'http://172.17.0.1:9200/'
          #curl:
          # CURLOPT_USERPWD: 'elastic:changeme'
       - \Helper\Functional
