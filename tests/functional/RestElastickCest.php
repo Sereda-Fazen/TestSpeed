@@ -9,7 +9,7 @@ class ApiCest
 
     function api(\FunctionalTester $I)
     {
-        $I->sendGET('/health');
+        $I->sendGET('/');
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
         
