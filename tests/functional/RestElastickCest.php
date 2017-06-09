@@ -13,11 +13,10 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->sendGET('_cat/health');
         $I->seeResponseCodeIs(200);
-        $I->sendGET('/_cat/master?v');
+        $I->sendGET('/_cat/master?format=json');
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
-        $I->sendGET('/_cat/indices?format=json&pretty');
-        $I->seeResponseCodeIs(200);
+
     }
 
 }
