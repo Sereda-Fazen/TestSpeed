@@ -11,7 +11,7 @@ class ApiCest
     {
 
         $I->amHttpAuthenticated('elastic', 'changeme');
-        $I->sendGET('/_cat/health');
+        $I->sendGET('_cat/health');
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
         
