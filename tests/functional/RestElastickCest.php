@@ -22,14 +22,14 @@ class ApiCest
 //
 //        ])
 
-       // $I->sendGET('test_index/_settings');
-        $I->sendPUT('test_index/test/1?pretty',[
-            'user' => 'alex',
-            "post_date" => date("Y-m-d H:i:s"),
-            "message" => "{[\"date\" : \"test\", \"host\" : \"test\", \"dashboard\": \"test\", \"product\": \"test\", \"insight_report\": \"test\", \"status\": \" test\"]}"
-
-        ]);
-        $I->canSeeResponseCodeIs(200);
+       $I->sendGET('test_index/test/1?pretty');
+//        $I->sendPUT('test_index/test/1?pretty',[
+//            'user' => 'alex',
+//            "post_date" => date("Y-m-d H:i:s"),
+//            "message" => "{[\"date\" : \"test\", \"host\" : \"test\", \"dashboard\": \"test\", \"product\": \"test\", \"insight_report\": \"test\", \"status\": \" test\"]}"
+//
+//        ]);
+        $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
 
 
