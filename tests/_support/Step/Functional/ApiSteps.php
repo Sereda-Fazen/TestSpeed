@@ -33,9 +33,10 @@ class ApiSteps extends \FunctionalTester
 
     }
     
-    function  createPutRequest($host, $dash, $content, $prod, $insight)
+    function  createPutRequest($url, $pass, $host, $dash, $content, $prod, $insight)
     {
         $I = $this;
+        $I->connectToElastick($url, $pass);
         $date_el = date("Y-m-d H:i:s");
 
         $total_time = $dash + $content + $prod + $insight;

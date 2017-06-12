@@ -49,7 +49,7 @@ class ApiCest
     {
         $I->connectToElastick('elastic', 'changeme');
         #$I->createIndex();
-        $I->createPutRequest('1','2','3','4','5'
+        $I->createPutRequest('elastic', 'changeme','1','2','3','4','5'
           );
 
         $I->sendGET('test_index/test/1?pretty');
