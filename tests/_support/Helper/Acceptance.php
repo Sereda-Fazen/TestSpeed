@@ -7,6 +7,9 @@ namespace Helper;
 use Codeception\Test\Descriptor;
 use Codeception\TestInterface;
 
+/**
+ * @property  errorStatus
+ */
 class Acceptance extends \Codeception\Module
 {
 
@@ -122,11 +125,23 @@ class Acceptance extends \Codeception\Module
 //        file_put_contents($file, $header);
 //    }
 
-    
+
+
+    public function writeJson($host,$dashboard,$content,$product_list,$insight_report){
+        $file = file_get_contents('../Test_Param/servers/test.json');  // Открыть файл data.json
+        $taskList = json_decode($file,TRUE);        // Декодировать в массив
+        unset($file);                               // Очистить переменную $file
+        $total_time = $dashboard + $content + $product_list + $insight_report;
+        $date = date("Y-m-d H:i:s");
+        $taskList[] = array('host'=>$host, 'dashboard'=> $dashboard, 'content'=>$content, 'product'=>$product_list,
+            'insight'=>$insight_report, 'total_time'=> $total_time, 'date'=> $date);        // Представить новую переменную как элемент массива, в формате 'ключ'=>'имя переменной'
+        file_put_contents('../Test_Param/servers/test.json',json_encode($taskList));  // Перекодировать в формат и записать в файл.
+        unset($taskList);
+    }
     
     public function writtenDate($host,$dashboard,$content,$product_list,$insight_report)
     {
-//        $file = '../Test/servers/Stages.csv';
+//      $file = '../Test/servers/Stages.csv';
         $file = '../Test_Param/servers/test.json';
         $total_time = $dashboard + $content + $product_list + $insight_report;
         $current = file_get_contents($file);
@@ -167,16 +182,15 @@ class Acceptance extends \Codeception\Module
 
      
 
-    public function errorData($error)
+    public function errorData($errorStatus)
 
     {
-//        $file = '../Test/servers/Stages.csv';
-        $file = '../Test_Param/servers/table.html';
-        $current = file_get_contents($file);
+//      $file = '../Test/servers/Stages.csv';
+        $file = '../Test_Param/servers/test.json';
+        $taskList = json_decode($file,TRUE);
+        $taskList[] = array('status'=> $errorStatus);
+        file_put_contents('../Test_Param/servers/test.json',json_encode($taskList));
 
-        $current .= "<tr>";
-        $current .= "<td>$error</td>";
-        json_decode($file, $current);
     }
 
 

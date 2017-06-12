@@ -1,8 +1,6 @@
 <?php
 namespace Step\Acceptance;
 
-use Exception;
-
 class AccountSteps extends \AcceptanceTester
 {
 
@@ -21,12 +19,12 @@ class AccountSteps extends \AcceptanceTester
         $I->amOnPage('/dashboard');
         $I->waitForJS("return jQuery.active == 0;", 1200);
         $dashboard = round((microtime(true) - $start), 2);
-        
+
         $start = microtime(true);
         $I->amOnPage('/assess/products');
         $I->waitForJS("return jQuery.active == 0;", 1200);
         $content = round((microtime(true) - $start), 2);
-        
+
         $start = microtime(true);
         $I->amOnPage('/assess/brand_report_ranking');
         $I->waitForJS("return jQuery.active == 0;", 1200);
@@ -37,14 +35,18 @@ class AccountSteps extends \AcceptanceTester
         $I->waitForJS("return jQuery.active == 0;", 1200);
         $product = round((microtime(true) - $start), 2);
 
-        
+
         if ($product > 5 || $content > 5 || $insight > 5 || $dashboard > 5){
             $I->errorData('Load is too long');
-        } else {
+        } 
+        elseif($product > 10 || $content > 10 || $insight > 10 || $dashboard > 10) {
+            $I->errorData('Critical load');
+        }
+        else {
             $I->errorData('Success');
         }
-        
-        $I->writtenDate($pass,$dashboard,$content,$insight,$product);
+
+        $I->writeJson($pass,$dashboard,$content,$insight,$product);
 
 
 
