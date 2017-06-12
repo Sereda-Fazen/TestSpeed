@@ -11,17 +11,17 @@ class ApiCest
     {
 
         $I->amHttpAuthenticated('elastic', 'changeme');
-        #$I->sendPUT('http://172.17.0.1:9200/_cat',['attachmentFile' => codecept_data_dir('test.json')]);
         $I->haveHttpHeader('Content-Type', 'application/json');
-        $I->sendPUT('test_index?pretty', [
-                'settings' => [
-                    'index' => [
-                    'number_of_shards' => 3,
-                    'number_of_replicas' => 2
-                ]
-            ]
-
-        ]);
+//        $I->sendPUT('test_index?pretty', [
+//                'settings' => [
+//                    'index' => [
+//                    'number_of_shards' => 3,
+//                    'number_of_replicas' => 2
+//                ]
+//            ]
+//
+//        ]);
+        $I->sendPUT('test_index?pretty',['attachmentFile' => codecept_data_dir('test.json')]);
         $I->canSeeResponseCodeIs(200);
         $I->seeResponseIsJson();
 
