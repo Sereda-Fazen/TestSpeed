@@ -21,7 +21,7 @@ class ApiCest
 //            ]
 //
 //        ]);
-        $I->sendPUT('test_index?pretty',['attachmentFile' => codecept_data_dir('test.json')]);
+        $I->sendPUT('test_index?pretty',['attachmentFile' => codecept_data_dir('../Test_Param/servers/test.json')]);
         $I->canSeeResponseCodeIs(200);
         $I->seeResponseIsJson();
 
