@@ -45,19 +45,13 @@ class ApiCest
 
 
 
-    function restApiElastickSearch(FunctionalTester $I)
+    function restApiElastickSearch(\Step\Functional\ApiSteps $I, FunctionalTester $I)
     {
-        $I->amHttpAuthenticated('elastic', 'changeme');
-        $I->haveHttpHeader('Content-Type', 'application/json');
+        $I->connectToElastick('elastic', 'changeme');
+        #$I->createIndex();
+        $I->createPutRequest('1','2','3','4','5'
+          );
 
-        $I->sendPUT('test_index/test/1?pretty',[
-            'user' => 'alex',
-            "post_date" => date("Y-m-d H:i:s"),
-            "message" => "{[\"date\" : \"test\", \"host\" : \"test\", \"dashboard\": \"test\", \"product\": \"test\", \"insight_report\": \"test\", \"status\": \" test\"]}"
-
-        ]);
-        $I->seeResponseCodeIs(200);
-        $I->seeResponseIsJson();
         $I->sendGET('test_index/test/1?pretty');
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
