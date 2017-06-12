@@ -22,12 +22,12 @@ class ApiCest
 //
 //        ])
 
-        $I->sendGET('test_index/_settings');
-//        $I->sendPUT('test_index?pretty',[
-//            'user' => 'test',
-//            "post_date" => date("Y-m-d H:i:s"),
-//            "message" => "test form codeception"
-//        ]);
+       // $I->sendGET('test_index/_settings');
+        $I->sendPUT('test_index?pretty',[
+            'user' => 'test',
+            "post_date" => date("Y-m-d H:i:s"),
+            "message" => "test form codeception"
+        ]);
         $I->canSeeResponseCodeIs(200);
         $I->seeResponseIsJson();
 
