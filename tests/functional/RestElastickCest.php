@@ -14,16 +14,7 @@ class ApiCest
         $I->sendGET('_cat/master?format=json');
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
-        $I->sendPUT(
-            [
-                'index' => 'my_index',
-                'body' => [
-                    'settings' => [
-                        'number_of_shards' => 2,
-                        'number_of_replicas' => 0
-                    ]
-                ]
-            ]);
+        $I->sendGET('/_cat/_settings');
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
 
