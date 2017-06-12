@@ -14,7 +14,7 @@ class ApiCest
         $I->sendGET('_cat/master?format=json');
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
-        $I->sendGET('/_cat/_settings');
+        $I->sendGET('_cat/_settings');
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
 
