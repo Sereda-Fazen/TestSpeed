@@ -7,7 +7,7 @@ use \Step\Functional;
 class ApiCest
 {
 
-    function restApiElastickSearch(\Step\Functional\ApiSteps $I, Step\Acceptance\AccountSteps $I)
+    function restApiElastickSearch(\Step\Functional\ApiSteps $I)
     {
         $I->connectToElastick('elastic', 'changeme');
         #$I->createIndex();
