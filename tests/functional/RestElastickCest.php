@@ -22,7 +22,7 @@ class ApiCest
 //
 //        ])
 
-        $I->sendGET('_settings');
+        $I->sendGET('test_index/_settings');
 //        $I->sendPUT('test_index?pretty',[
 //            'user' => 'test',
 //            "post_date" => date("Y-m-d H:i:s"),
