@@ -29,7 +29,7 @@ class ApiCest
             "message" => "{[\"date\" : \"test\", \"host\" : \"test\", \"dashboard\": \"test\", \"product\": \"test\", \"insight_report\": \"test\", \"status\": \" test\"]}"
 
         ]);
-        $I->canSeeResponseCodeIs(200);
+        $I->canSeeResponseCodeIs(201);
         $I->seeResponseIsJson();
 
 
