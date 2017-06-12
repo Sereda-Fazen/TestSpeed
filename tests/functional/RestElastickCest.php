@@ -22,15 +22,12 @@ class ApiCest
 //
 //        ]);
         $I->sendPUT('test_index?pretty',[
-            'user' => 'кому отправлено',
-            "post_date" => "дата отправления",
-            "message" => "{[\"date\" : \"2012-10-10\", \"walmart\" : \"\", \"dashboard\": \"2.2\", \"product\": \"3.4\", \"insight_report\": \"3.5\", \"status\": \" success\"]}"
+            'user' => 'test',
+            "post_date" => date("Y-m-d H:i:s"),
+            "message" => "test form codeception"
         ]);
         $I->canSeeResponseCodeIs(200);
         $I->seeResponseIsJson();
-
-
-
 
 
     }
