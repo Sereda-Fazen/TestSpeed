@@ -7,9 +7,10 @@ use \Step\Acceptance;
  */
 class SpeedAlyticsincCest
 {
-    
+
     /**
      * @env walmart-furniture
+     * @param Acceptance\AccountSteps $I
      */
     
     function walmartFurniture(\Step\Acceptance\AccountSteps $I)

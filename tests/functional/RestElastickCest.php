@@ -1,5 +1,6 @@
 <?php
 
+use \Step\Functional;
 /**
  * @group api
  */
