@@ -7,7 +7,7 @@
 class ApiCest
 {
 
-    function api(\FunctionalTester $I, \Step\Acceptance\AccountSteps $I)
+    function api(\FunctionalTester $I)
     {
         
         $I->amHttpAuthenticated('elastic', 'changeme');
