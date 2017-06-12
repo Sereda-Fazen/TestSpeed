@@ -11,11 +11,7 @@ class ApiCest
     {
         $I->connectToElastick('elastic', 'changeme');
         #$I->createIndex();
-        $I->createPutRequest(
-            Step\Acceptance\AccountSteps::$dashboard,
-            Step\Acceptance\AccountSteps::$content,
-            Step\Acceptance\AccountSteps::$insight,
-            Step\Acceptance\AccountSteps::$product
+        $I->createPutRequest('1','2','3','4','5'
           );
         
         $I->sendGET('test_index/test/1?pretty');

@@ -33,14 +33,24 @@ class ApiSteps extends \FunctionalTester
 
     }
     
-    function  createPutRequest($dash, $content, $prod, $insight)
+    function  createPutRequest($host, $dash, $content, $prod, $insight)
     {
         $I = $this;
-        $I->sendGET('test_index/test/1?pretty');
+        $date_el = date("Y-m-d H:i:s");
+
+        $total_time = $dash + $content + $prod + $insight;
+//        if ($dash > 5 || $content > 5 || $prod > 5 || $insight > 5)
+//        {
+//          $status  =  "Load is too long";
+//        }
+//        elseif ($dash > 10 || $content > 10 || $prod > 10 || $insight > 10){
+//          $status =   "Load is critical";
+//        }
+
         $I->sendPUT('test_index/test/1?pretty',[
             'user' => 'alex',
             "post_date" => date("Y-m-d H:i:s"),
-            "message" => "{[\"date\" : \"$date_time\", \"host\" : \"$host\", \"dashboard\": \"$dash\",\"content_health\": \"$content\" , \"product\": \"$prod\", \"insight_report\": \"$insight\", \"total_time\": $total_time\", \"status\": \" $status\"]}"
+            "message" => "{[\"date\" : \"$date_el\", \"host\" : \"$host\", \"dashboard\": \"$dash\",\"content_health\": \"$content\" , \"product\": \"$prod\", \"insight_report\": \"$insight\", \"total_time\": $total_time\"]}"
 
         ]);
         $I->seeResponseCodeIs(200);

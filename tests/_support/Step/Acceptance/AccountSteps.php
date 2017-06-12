@@ -5,6 +5,7 @@ class AccountSteps extends \AcceptanceTester
 {
 
 
+    public static $pass;
     public static $dashboard;
     public static $content;
     public static $insight;
@@ -12,7 +13,7 @@ class AccountSteps extends \AcceptanceTester
     
     function stepsSpeedTest($url, $pass)
     {
-
+        
         $I = $this;
         $I->amOnUrl($url);
         $I->waitForText('Please login below',120);
@@ -52,7 +53,7 @@ class AccountSteps extends \AcceptanceTester
 //            $I->errorData('Success');
 //        }
 
-        $I->writeJson($pass,self::$dashboard,self::$content,self::$insight,self::$product);
+       //$I->writeJson($pass,self::$dashboard,self::$content,self::$insight,self::$product);
 
 
 
