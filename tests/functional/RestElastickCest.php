@@ -1,38 +1,26 @@
 <?php
 
-
 /**
  * @group api
  */
 class ApiCest
 {
 
-    function api(\FunctionalTester $I)
+    function restApiElastickSearch(\Step\Functional\ApiSteps $I, Step\Acceptance\AccountSteps $I)
     {
+        $I->connectToElastick('elastic', 'changeme');
+        #$I->createIndex();
+        $I->createPutRequest(
+            Step\Acceptance\AccountSteps::$dashboard,
+            Step\Acceptance\AccountSteps::$content,
+            Step\Acceptance\AccountSteps::$insight,
+            Step\Acceptance\AccountSteps::$product
+          );
         
-        $I->amHttpAuthenticated('elastic', 'changeme');
-        $I->haveHttpHeader('Content-Type', 'application/json');
-//        $I->sendPUT('test_index?pretty', [
-//                'settings' => [
-//                    'index' => [
-//                    'number_of_shards' => 3,
-//                    'number_of_replicas' => 2
-//                ]
-//            ]
-//
-//        ])
-
-       $I->sendGET('test_index/test/1?pretty');
-//        $I->sendPUT('test_index/test/1?pretty',[
-//            'user' => 'alex',
-//            "post_date" => date("Y-m-d H:i:s"),
-//            "message" => "{[\"date\" : \"test\", \"host\" : \"test\", \"dashboard\": \"test\", \"product\": \"test\", \"insight_report\": \"test\", \"status\": \" test\"]}"
-//
-//        ]);
+        $I->sendGET('test_index/test/1?pretty');
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
-
-
     }
+    
 
 }
