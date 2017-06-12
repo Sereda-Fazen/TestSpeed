@@ -45,7 +45,7 @@ class ApiCest
 
 
 
-    function restApiElastickSearch(\Step\Functional\ApiSteps $I, FunctionalTester $I)
+    function restApiElastickSearch(\Step\Functional\ApiSteps $I)
     {
         $I->connectToElastick('elastic', 'changeme');
         #$I->createIndex();
