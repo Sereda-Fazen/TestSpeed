@@ -23,8 +23,8 @@ class ApiCest
 //        ])
 
        // $I->sendGET('test_index/_settings');
-        $I->sendPUT('test_index/type1?pretty',[
-            'user' => 'test',
+        $I->sendPUT('test_index/test/1?pretty',[
+            'user' => 'alex',
             "post_date" => date("Y-m-d H:i:s"),
             "message" => "test form codeception"
         ]);
