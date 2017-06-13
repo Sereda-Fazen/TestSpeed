@@ -13,7 +13,7 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
 
-        $I->sendPUT('my_index2?pretty', [
+        $I->sendPUT('test_index?pretty', [
 
             'index' => 'my_index',
             'body' => [
