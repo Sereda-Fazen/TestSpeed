@@ -17,7 +17,8 @@ class ApiCest
             'settings' => [
                 'index' => [
                     'number_of_shards' => 3,
-                    'number_of_replicas' => 2
+                    'number_of_replicas' => 2,
+                    'timestamp' => date("Y-m-d H:i:s")
                 ]
             ]
 
