@@ -13,28 +13,26 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
 
-        $I->sendPUT('alex_index_2?pretty', [
+        $I->sendPUT('alex_index_22?pretty', [
+
             "settings" => [
-        "number_of_replicas" => 2
-        ]
-        ]);
-
-        $I->seeResponseCodeIs(200);
-        $I->seeResponseIsJson();
-
-        $I->sendPUT('alex_index', [
-        "alex_index_2" => [
-        "_index" => [
-            "enabled" => true
-        ]
+            "number_of_shards" => 1
+    ],
+    "mappings" => [
+        "type1" => [
+            "_index" => [ "enabled" => true ],
+            "_source" => [ "enabled" => false ],
+            "properties" => [
+                "field1" => [ "type" => "string", "index" => "not_analyzed" ]
             ]
+        ]
+    ]
+
+
         ]);
 
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
-
-
-
 
 
 //        $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
