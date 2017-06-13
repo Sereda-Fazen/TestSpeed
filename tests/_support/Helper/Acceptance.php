@@ -128,14 +128,14 @@ class Acceptance extends \Codeception\Module
 
 
     public function writeJson($host,$dashboard,$content,$product_list,$insight_report,$status){
-        $file = file_get_contents(__DIR__.'../../../servers/test.json');  // Открыть файл data.json
+        $file = file_get_contents('../Test_Param/servers/test.json');  // Открыть файл data.json
         $taskList = json_decode($file,TRUE);        // Декодировать в массив
         unset($file);                               // Очистить переменную $file
         $total_time = $dashboard + $content + $product_list + $insight_report;
         $date = date("Y-m-d H:i:s");
         $taskList[] = array('host'=>$host, 'dashboard'=> $dashboard, 'content'=>$content, 'product'=>$product_list,
             'insight'=>$insight_report, 'total_time'=> $total_time, 'date'=> $date, 'status' => $status);        // Представить новую переменную как элемент массива, в формате 'ключ'=>'имя переменной'
-        file_put_contents(__DIR__.'../../../servers/test.json',json_encode($taskList));  // Перекодировать в формат и записать в файл.
+        file_put_contents('../Test_Param/servers/test.json',json_encode($taskList));  // Перекодировать в формат и записать в файл.
         unset($taskList);
     }
     

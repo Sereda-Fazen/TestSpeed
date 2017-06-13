@@ -43,7 +43,7 @@ class AccountSteps extends \AcceptanceTester
             $status = 'Critical load';
         }
         else {
-            $I->errorData('Success');
+            $status = 'Success';
         }
 
        $I->writeJson($pass,$dashboard,$content,$insight,$product, $status);
