@@ -16,23 +16,25 @@ class ApiCest
         $I->sendPUT('alex_index_22?pretty', [
 
             "settings" => [
-            "number_of_shards" => 1
-    ],
-    "mappings" => [
-        "type1" => [
-            "_index" => [ "enabled" => true ],
-            "_source" => [ "enabled" => false ],
-            "properties" => [
-                "field1" => [ "type" => "string", "index" => "not_analyzed" ]
+                "number_of_shards" => 1
+            ],
+            "mappings" => [
+                "type1" => [
+                    "_source" => [ "enabled" => false ],
+                    "properties" => [
+                        "field1" => [ "type" => "string", "index" => "alex_index_22", "_timestamp" => ["enabled" => true ] ]
+                    ]
+                ]
             ]
-        ]
-    ]
 
 
         ]);
 
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
+
+
+
 
 
 //        $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
