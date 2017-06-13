@@ -13,7 +13,7 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
 
-        $I->sendPUT('alex_test_index/alex_type/1', [
+        $I->sendPUT('test_index_2', [
 
             "settings" => [
                 "number_of_shards" => 1
@@ -23,7 +23,7 @@ class ApiCest
                     "_source" => [ "enabled" => false ],
                     "_index" => ["enabled" => true],
                     "properties" => [
-                        "field1" => [ "type" => "string", "index" => "alex_index_22", "_timestamp" => ["enabled" => true ] ]
+                        "field1" => [ "type" => "string", "_index" => "test_index_2", "_timestamp" => ["enabled" => true ] ]
                     ]
                 ]
             ]
