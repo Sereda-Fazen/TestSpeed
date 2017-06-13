@@ -8,9 +8,9 @@ use \Step\Acceptance;
 class StagesCest
 {
 
-    function test (\Helper\Acceptance $I){
-        $I->html_header();
-    }
+//    function test (\Helper\Acceptance $I){
+//        $I->html_header();
+//    }
 
     /**
      * @env walmart-furniture
@@ -1141,9 +1141,9 @@ class StagesCest
     }
 
 
-    function footer (\Helper\Acceptance $I){
-        $I->html_footer();
-    }
+//    function footer (\Helper\Acceptance $I){
+//        $I->html_footer();
+//    }
 
 
 }
