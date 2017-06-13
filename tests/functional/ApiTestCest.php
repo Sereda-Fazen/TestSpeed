@@ -19,11 +19,11 @@ class ApiCest
                 "number_of_shards" => 1
             ],
             "mappings" => [
-                "alex_type" => [
+                "type" => [
                     "_source" => [ "enabled" => false ],
                     "_index" => ["enabled" => true],
                     "properties" => [
-                        "field1" => [ "type" => "string", "_index" => "test_index_2", "_timestamp" => ["enabled" => true ] ]
+                        "field" => [ "type" => "string", "_index" => "test_index_2", "_timestamp" => ["enabled" => true ] ]
                     ]
                 ]
             ]
