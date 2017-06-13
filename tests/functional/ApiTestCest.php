@@ -15,8 +15,7 @@ class ApiCest
 
         $I->sendPUT('alex_index_1?pretty', [
             "settings" => [
-        "number_of_shards" => 3,
-        "number_of_replicas" => 2
+            "_index" => 'alex_index_1'
         ]
         ]);
 
