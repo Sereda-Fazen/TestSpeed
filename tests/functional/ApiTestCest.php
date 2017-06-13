@@ -12,8 +12,7 @@ class ApiCest
 
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
-        $json_data = file_get_contents('/var/jenkins_home/workspace/Test elasticsearch/servers/test.json');
-        #$json_data = file_get_contents('../Test_Param/servers/test.json');
+        $json_data = file_get_contents(__DIR__ . '/../../servers/test.json/servers/test.json');
         $I->sendPUT('test_index/test/1?pretty', [
             'user' => 'alex',
             "post_date" => date("Y-m-d H:i:s"),
@@ -22,7 +21,7 @@ class ApiCest
         $I->seeResponseIsJson();
         $I->comment('The PUT request was sent to Elastic Search!');
 
-        file_put_contents($json_data, '');
+        file_put_contents(__DIR__ . '/../../servers/test.json', '');
         $I->comment('The file was cleared!');
 
     }
