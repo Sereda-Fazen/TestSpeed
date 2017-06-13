@@ -135,7 +135,7 @@ class Acceptance extends \Codeception\Module
         $date = date("Y-m-d H:i:s");
         $taskList[] = array('host'=>$host, 'dashboard'=> $dashboard, 'content'=>$content, 'product'=>$product_list,
             'insight'=>$insight_report, 'total_time'=> $total_time, 'date'=> $date, 'status' => $status);        // Представить новую переменную как элемент массива, в формате 'ключ'=>'имя переменной'
-        file_put_contents(__DIR__ .'/../../../servers/test.json',json_encode($taskList));  // Перекодировать в формат и записать в файл.
+        file_put_contents(__DIR__ .'/../../../servers/test.json',json_encode($taskList,JSON_PRETTY_PRINT));  // Перекодировать в формат и записать в файл.
         unset($taskList);
     }
     
