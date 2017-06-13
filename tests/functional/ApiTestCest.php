@@ -13,13 +13,11 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
 
-        $I->sendPUT('alex_index?pretty', [
-            'settings' => [
-                'index' => [
-                    '_index' => 'alex_index'
-                ]
-            ]
-
+        $I->sendPUT('alex_index_1?pretty', [
+            "settings" => [
+        "number_of_shards" => 3,
+        "number_of_replicas" => 2
+        ]
         ]);
 
         $I->seeResponseCodeIs(200);
