@@ -2990,7 +2990,7 @@ trait AcceptanceTesterActions
      *
      * @see \Helper\Acceptance::writeJson()
      */
-    public function writeJson($host, $dashboard, $content, $product_list, $insight_report) {
+    public function writeJson($host, $dashboard, $content, $product_list, $insight_report, $status) {
         return $this->getScenario()->runStep(new \Codeception\Step\Action('writeJson', func_get_args()));
     }
 

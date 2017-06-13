@@ -7,7 +7,7 @@ use \Step\Functional;
 class ApiCest
 {
 
-//    function api(\FunctionalTester $I)
+//    function elastikSearchApi(\FunctionalTester $I)
 //    {
 //
 //        $I->amHttpAuthenticated('elastic', 'changeme');
@@ -23,17 +23,18 @@ class ApiCest
 ////        ])
 //
 //        // $I->sendGET('test_index/_settings');
-//        $I->sendPUT('test_index/test/1?pretty',[
+//        $I->sendPUT('test_index/test/1?pretty', [
 //            'user' => 'alex',
 //            "post_date" => date("Y-m-d H:i:s"),
-//            "message" => "{[\"date\" : \"test\", \"host\" : \"test\", \"dashboard\": \"test\", \"product\": \"test\", \"insight_report\": \"test\", \"status\": \" test\"]}"
+//            "message" => '{[\"date\" : \"' . $dashboard . '\", \"host\" : \"' . $test . '\", \"dashboard\": \"' . $test . '\", \"product\": \"' . $test . '\", \"insight_report\": \"' . $test . '\", \"status\": \"' . $test . '\"]}';
 //
 //        ]);
 //        $I->canSeeResponseCodeIs(200);
 //        $I->seeResponseIsJson();
-//
-//
 //    }
+//
+////
+////    }
 
 
 
@@ -44,18 +45,18 @@ class ApiCest
 
 
 
-
-    function restApiElastickSearch(\Step\Functional\ApiSteps $I)
-    {
-        $I->connectToElastick('elastic', 'changeme');
-        #$I->createIndex();
-        $I->createPutRequest('elastic', 'changeme','1','2','3','4','5'
-          );
-
-        $I->sendGET('test_index/test/1?pretty');
-        $I->seeResponseCodeIs(200);
-        $I->seeResponseIsJson();
-    }
-    
+//
+//    function restApiElastickSearch(\Step\Functional\ApiSteps $I)
+//    {
+//        $I->connectToElastick('elastic', 'changeme');
+//        #$I->createIndex();
+//        $I->createPutRequest('1','2','3','4','5'
+//          );
+//
+//        $I->sendGET('test_index/test/1?pretty');
+//        $I->seeResponseCodeIs(200);
+//        $I->seeResponseIsJson();
+//    }
+//
 
 }

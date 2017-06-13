@@ -127,35 +127,35 @@ class Acceptance extends \Codeception\Module
 
 
 
-    public function writeJson($host,$dashboard,$content,$product_list,$insight_report){
-        $file = file_get_contents('../Test_Param/servers/test.json');  // Открыть файл data.json
+    public function writeJson($host,$dashboard,$content,$product_list,$insight_report,$status){
+        $file = file_get_contents(__DIR__.'../../../servers/test.json');  // Открыть файл data.json
         $taskList = json_decode($file,TRUE);        // Декодировать в массив
         unset($file);                               // Очистить переменную $file
         $total_time = $dashboard + $content + $product_list + $insight_report;
         $date = date("Y-m-d H:i:s");
         $taskList[] = array('host'=>$host, 'dashboard'=> $dashboard, 'content'=>$content, 'product'=>$product_list,
-            'insight'=>$insight_report, 'total_time'=> $total_time, 'date'=> $date);        // Представить новую переменную как элемент массива, в формате 'ключ'=>'имя переменной'
-        file_put_contents('../Test_Param/servers/test.json',json_encode($taskList));  // Перекодировать в формат и записать в файл.
+            'insight'=>$insight_report, 'total_time'=> $total_time, 'date'=> $date, 'status' => $status);        // Представить новую переменную как элемент массива, в формате 'ключ'=>'имя переменной'
+        file_put_contents(__DIR__.'../../../servers/test.json',json_encode($taskList));  // Перекодировать в формат и записать в файл.
         unset($taskList);
     }
     
-    public function writtenDate($host,$dashboard,$content,$product_list,$insight_report)
-    {
-//      $file = '../Test/servers/Stages.csv';
-        $file = '../Test_Param/servers/test.json';
-        $total_time = $dashboard + $content + $product_list + $insight_report;
-        $current = file_get_contents($file);
-        $date = date("Y-m-d H:i:s");
-
+//    public function writtenDate($host,$dashboard,$content,$product_list,$insight_report)
+//    {
+////      $file = '../Test/servers/Stages.csv';
+//        $file = '../Test_Param/servers/test.json';
+//        $total_time = $dashboard + $content + $product_list + $insight_report;
+//        $current = file_get_contents($file);
+//        $date = date("Y-m-d H:i:s");
 //
-        $current .= "$host,";
-        $current .= "$date,";
-        $current .= "$dashboard,";
-        $current .= "$content,";
-        $current .= "$product_list,";
-        $current .= "$insight_report,";
-        $current .= "$total_time;\n";
-        json_decode($file, $current);
+////
+//        $current .= "$host,";
+//        $current .= "$date,";
+//        $current .= "$dashboard,";
+//        $current .= "$content,";
+//        $current .= "$product_list,";
+//        $current .= "$insight_report,";
+//        $current .= "$total_time;\n";
+//        json_decode($file, $current);
 
 
 //        $current .= "<td>$host</td>";
@@ -169,7 +169,7 @@ class Acceptance extends \Codeception\Module
 //
 //        file_put_contents($file, $current);
 
-    }
+
 
 //    public function html_footer(){
 //        $footerFile = '../Test_Param/servers/templates/footer.php';
@@ -181,17 +181,18 @@ class Acceptance extends \Codeception\Module
 //    }
 
      
+//
+//    public function errorData($errorStatus)
+//
+//    {
+////      $file = '../Test/servers/Stages.csv';
+//        $file = __DIR__.'../../../servers/test.json';
+//        $taskList = json_decode($file,TRUE);
+//        $taskList[] = array('status'=> $errorStatus);
+//        file_put_contents('../Test_Param/servers/test.json',json_encode($taskList));
+//
+//    }
 
-    public function errorData($errorStatus)
-
-    {
-//      $file = '../Test/servers/Stages.csv';
-        $file = '../Test_Param/servers/test.json';
-        $taskList = json_decode($file,TRUE);
-        $taskList[] = array('status'=> $errorStatus);
-        file_put_contents('../Test_Param/servers/test.json',json_encode($taskList));
-
-    }
 
 
 

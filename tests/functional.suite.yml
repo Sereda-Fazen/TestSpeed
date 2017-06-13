@@ -11,7 +11,5 @@ modules:
       - REST:
          depends: PhpBrowser
          url: 'http://172.17.0.1:9200/'
-         #curl:
-         # CURLOPT_USERPWD: 'elastic:changeme'
       - \Helper\Functional
       - Asserts
