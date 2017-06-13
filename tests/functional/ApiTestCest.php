@@ -12,7 +12,7 @@ class ApiCest
 
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
-        $json_data = file_get_contents(__DIR__ . '/../../servers/test.json/servers/test.json');
+        $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
         $I->sendPUT('test_index/test/1?pretty', [
             'user' => 'alex',
             "post_date" => date("Y-m-d H:i:s"),
