@@ -13,7 +13,7 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
 
-        $I->sendPUT('alex_index_22/type1?pretty', [
+        $I->sendPUT('alex_index_22/type1/1?pretty', [
 
             "settings" => [
                 "number_of_shards" => 1
