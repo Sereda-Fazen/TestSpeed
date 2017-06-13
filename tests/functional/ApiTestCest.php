@@ -13,53 +13,53 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
 
-        $I->sendPUT('test_index?pretty', [
-
-            'index' => 'my_index',
-            'body' => [
-                'settings' => [
-                    'number_of_shards' => 3,
-                    'number_of_replicas' => 2
-                ],
-                'mappings' => [
-                    'my_type' => [
-                        '_source' => [
-                            'enabled' => true
-                        ],
-                        'properties' => [
-                            'first_name' => [
-                                'type' => 'string',
-                                'analyzer' => 'standard'
-                            ],
-                            'age' => [
-                                'type' => 'integer'
-                            ]
-                        ]
-                    ]
-                ]
-            ]
-
-
-        ]);
-
-        $I->seeResponseCodeIs(200);
-        $I->seeResponseIsJson();
-
-
-
-
-
-//        $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
-//        $I->sendPUT('test_index/test/1?pretty', [
-//            'user' => 'alex',
-//            "post_date" => date("Y-m-d H:i:s"),
-//            "message" => addslashes($json_data)]);
-//        $I->canSeeResponseCodeIs(200);
-//        $I->seeResponseIsJson();
-//        $I->comment('The PUT request was sent to Elastic Search!');
+//        $I->sendPUT('test_index?pretty', [
 //
-//        file_put_contents(__DIR__ . '/../../servers/test.json', '');
-//        $I->comment('The file was cleared!');
+//            'index' => 'my_index',
+//            'body' => [
+//                'settings' => [
+//                    'number_of_shards' => 3,
+//                    'number_of_replicas' => 2
+//                ],
+//                'mappings' => [
+//                    'my_type' => [
+//                        '_source' => [
+//                            'enabled' => true
+//                        ],
+//                        'properties' => [
+//                            'first_name' => [
+//                                'type' => 'string',
+//                                'analyzer' => 'standard'
+//                            ],
+//                            'age' => [
+//                                'type' => 'integer'
+//                            ]
+//                        ]
+//                    ]
+//                ]
+//            ]
+//
+//
+//        ]);
+//
+//        $I->seeResponseCodeIs(200);
+//        $I->seeResponseIsJson();
+
+
+
+
+
+        $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
+        $I->sendPUT('alex_test_index/alex_type/1?pretty', [
+            'user' => 'alex',
+            "post_date" => date("Y-m-d H:i:s"),
+            "message" => addslashes($json_data)]);
+        $I->canSeeResponseCodeIs(200);
+        $I->seeResponseIsJson();
+        $I->comment('The PUT request was sent to Elastic Search!');
+
+        file_put_contents(__DIR__ . '/../../servers/test.json', '');
+        $I->comment('The file was cleared!');
 
     }
 }
