@@ -16,9 +16,7 @@ class ApiCest
         $I->sendPUT('alex_index?pretty', [
             'settings' => [
                 'index' => [
-                    'number_of_shards' => 3,
-                    'number_of_replicas' => 2,
-                    'timestamp' => date("Y-m-d H:i:s")
+                    '_index' => 'alex_index'
                 ]
             ]
 
