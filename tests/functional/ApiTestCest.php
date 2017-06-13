@@ -20,9 +20,9 @@ class ApiCest
         $I->canSeeResponseCodeIs(200);
         $I->seeResponseIsJson();
         $I->comment('The PUT request was sent to Elastic Search!');
-
-        file_put_contents(__DIR__ . '/../../servers/test.json', '');
-        $I->comment('The file was cleared!');
+//
+//        file_put_contents(__DIR__ . '/../../servers/test.json', '');
+//        $I->comment('The file was cleared!');
 
     }
 }
