@@ -15,14 +15,14 @@ class ApiCest
 
         $I->sendPUT('alex_index_2?pretty', [
             "settings" => [
-        "number_of_shards" => 1
+        "number_of_replicas" => 2
         ]
         ]);
 
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
 
-        $I->sendPUT('alex_index_2', [
+        $I->sendPUT('alex_index', [
         "alex_index_2" => [
         "_index" => [
             "enabled" => true
