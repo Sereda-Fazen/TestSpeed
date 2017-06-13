@@ -9,13 +9,12 @@ class SpeedAlyticsincCest
 {
 
     /**
-     * @env walmart-furniture
-     * @param Acceptance\AccountSteps $I
+     * @env talkingrain
      */
-    
-    function walmartFurniture(\Step\Acceptance\AccountSteps $I)
+
+    function talkingrain(\Step\Acceptance\AccountSteps $I)
     {
-        $I->stepsSpeedTest('http://walmart-furniture.contentanalyticsinc.com','Walmart-furniture');
+        $I->stepsSpeedTest('http://talkingrain.contentanalyticsinc.com', 'Talkingrain');
     }
     
 }
