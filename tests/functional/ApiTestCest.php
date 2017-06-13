@@ -20,8 +20,10 @@ class ApiCest
             "message" => addslashes($json_data)]);
         $I->canSeeResponseCodeIs(200);
         $I->seeResponseIsJson();
+        $I->comment('The PUT request was sent to Elastick Search!');
 
         file_put_contents($json_data, '');
+        $I->comment('The file was cleared!');
 
     }
 }
