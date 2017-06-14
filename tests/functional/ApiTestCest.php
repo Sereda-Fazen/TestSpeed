@@ -36,8 +36,7 @@ class ApiCest
         $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
         $I->sendPOST('alex1/alex_test/1?pretty', [
             'user' => 'alex',
-            "timestamp" =>  ["type"=>  "date",
-                            "format"=> "2017-06-14"],
+            "timestamp" => date('Y-m-d\TH:i:s.v\Z'),
             "message" => addslashes($json_data)]);
         $I->canSeeResponseCodeIs(201);
         $I->seeResponseIsJson();
