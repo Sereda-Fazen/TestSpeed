@@ -12,11 +12,8 @@ class ApiCest
 
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
-        $I->sendDELETE('alex_alex_index', []);
-        $I->sendDELETE('alex_alex_index2', []);
-        $I->sendDELETE('alex_alex_index3', []);
-        $I->sendDELETE('alex_alex_index4', []);
-        $I->sendDELETE('alex_alex_finale', []);
+
+        $I->sendDELETE('alex_alex_final', []);
 //        $I->sendPUT('alex1?pretty', [
 //
 //           [
