@@ -13,16 +13,17 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
 
-        $I->sendPUT('alex_index/alex/1?pretty', [
+        $I->sendDELETE('alex_index', [
 
-            [
-              "title" => "Index Alex",
-              "content" => "<p>Index is created by Alex<p>",
-              "tags"=> [
-                    "test",
-                    "test2"
-                ],
-            ]
+//            [
+//              "title" => "Index Alex",
+//              "content" => "<p>Index is created by Alex<p>",
+//              "tags"=> [
+//                    "test",
+//                    "test2"
+//                ],
+//              "published_at" => "2014-09-12T20:44:42+00:00"
+//            ]
     ]);
 
 
