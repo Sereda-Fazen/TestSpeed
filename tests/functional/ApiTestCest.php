@@ -13,22 +13,19 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
 //        $I->sendDELETE('alex_index', []);
-        $I->sendPUT('alex_index?pretty', [
+        $I->sendPUT('alex_alex_index?pretty', [
 
-          "settings"=> [
-                "number_of_replicas"=> 1,
-            "number_of_shards"=> 1,
-          ],
-
-            "mappings"=> [
-                    "my_type"=> [
-                        "_timestamp"=> [
-                        "enabled"=> true
-                        ]
-
-            ],
-
+                    "settings" => [
+                "number_of_shards" => 1
+        ],
+        "mappings" => [
+                "_default_"=>[
+                    "_timestamp" => [
+                        "enabled" => true,
+                    "store" => true
+                ]
             ]
+          ]
         ]);
 
 
@@ -36,7 +33,7 @@ class ApiCest
         $I->seeResponseIsJson();
 //
         $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
-        $I->sendPUT('alex_index/alex_test/1?pretty', [
+        $I->sendPUT('alex_alex_index/alex_test/1?pretty', [
             'user' => 'alex',
             "post_date" => date("Y-m-d H:i:s"),
             "message" => addslashes($json_data),
