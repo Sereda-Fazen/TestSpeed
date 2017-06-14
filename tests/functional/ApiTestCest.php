@@ -13,7 +13,7 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
 //        $I->sendDELETE('alex_alex_index', []);
-        $I->sendPUT('alex_alex_index2?pretty', [
+        $I->sendPUT('alex_alex_index3?pretty', [
 
             "settings" => [
                 "number_of_shards" => 1
@@ -25,10 +25,10 @@ class ApiCest
         $I->seeResponseIsJson();
 //
         $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
-        $I->sendPUT('alex_alex_index2/alex_test/1?pretty', [
+        $I->sendPUT('alex_alex_index3/alex_test/1?pretty', [
             'user' => 'alex',
             "timestamp" => ["type"=>"date",
-               "format"=>"YYYY-MM-DD'T'HH:mm:ssZ"],
+               "format"=> date("Y-m-d H:i:s")],
             "message" => addslashes($json_data),
             ]);
         $I->canSeeResponseCodeIs(201);
