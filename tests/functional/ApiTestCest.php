@@ -28,8 +28,9 @@ class ApiCest
         $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
         $I->sendPUT('alex_index/alex_test/1?pretty', [
             'user' => 'alex',
-            "timestamp" => date("Y-m-d H:i:s"),
-            "message" => addslashes($json_data)]);
+            "post_date" => date("Y-m-d H:i:s"),
+            "message" => addslashes($json_data),
+            "timestamp" => date("Y-m-d H:i:s")]);
         $I->canSeeResponseCodeIs(201);
         $I->seeResponseIsJson();
         $I->comment('The PUT request was sent to Elastic Search!');
