@@ -28,7 +28,6 @@ class ApiCest
         ],
         ]);
 
-
         $I->seeResponseCodeIs(200);
         $I->seeResponseIsJson();
 
