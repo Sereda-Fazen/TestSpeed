@@ -13,28 +13,28 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
         //   $I->sendDELETE('alex1', []);
-//       $I->sendPUT('alex2?pretty', [
-//
-//        "mappings" => [
-//              "alex_test" => [
-//                  "properties" => [
-//                        "timestamp" => [
-//                            "type"=> "date",
-//                               "format" => "yyyy-MM-dd"
-//               ]
-//             ]
-//   ]
-//
-//
-//        ],
-//        ]);
+       $I->sendPUT('alex3?pretty', [
+
+        "mappings" => [
+              "alex_test" => [
+                  "properties" => [
+                        "timestamp" => [
+                            "type"=> "date",
+                               "format" => "yyyy-MM-dd'T'HH:mm:ss,SSSZZZ"
+               ]
+             ]
+   ]
 
 
-//        $I->seeResponseCodeIs(200);
-//        $I->seeResponseIsJson();
+        ],
+        ]);
+
+
+        $I->seeResponseCodeIs(200);
+        $I->seeResponseIsJson();
 
         $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
-        $I->sendPOST('alex2/alex_test/1?pretty', [
+        $I->sendPOST('alex3/alex_test/1?pretty', [
             'user' => 'alex',
             "timestamp" => 'date',
             "message" => addslashes($json_data)]);
