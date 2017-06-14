@@ -13,20 +13,30 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
 
-        $I->sendDELETE('alex_index', [
+        $I->sendPUT('alex_index?pretty=true', [
 
-//            [
-//              "title" => "Index Alex",
-//              "content" => "<p>Index is created by Alex<p>",
-//              "tags"=> [
-//                    "test",
-//                    "test2"
-//                ],
-//              "published_at" => "2014-09-12T20:44:42+00:00"
-//            ]
-    ]);
+            'settings' => [
+                'index' => [
+                    'number_of_shards' => 1,
+                    'number_of_replicas' => 0
+                ]
+            ]
+
+        ]);
 
 
+        $I->seeResponseCodeIs(200);
+        $I->seeResponseIsJson();
+
+        $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
+        $I->sendPUT('alex_index?pretty', [
+            'user' => 'alex',
+            "post_date" => date("Y-m-d H:i:s"),
+            "message" => addslashes($json_data)]);
+        $I->canSeeResponseCodeIs(200);
+        $I->seeResponseIsJson();
+        $I->comment('The PUT request was sent to Elastic Search!');
+        
 
 
 //            'index' => 'my_index',
@@ -55,9 +65,6 @@ class ApiCest
 //
 //
 
-
-        $I->seeResponseCodeIs(200);
-        $I->seeResponseIsJson();
 
 
 
