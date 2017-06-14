@@ -13,7 +13,7 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
        // $I->sendDELETE('alex1', []);
-        $I->sendPUT('alex21?pretty', [
+        $I->sendPUT('alex212?pretty', [
 
           "mappings" => [
                 "alex_test" => [
@@ -32,8 +32,17 @@ class ApiCest
         $I->seeResponseIsJson();
 
         $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
-        $I->sendPOST('alex21/alex_test/1?pretty', [
-            addslashes($json_data)]);
+        $I->sendPOST('alex212/alex_test/1?pretty', [
+
+            "host" => "Walmart-furniture",
+            "dashboard" => 2.82,
+            "content" => 2.26,
+            "product" => 3.66,
+            "insight" => 2.3,
+            "total_time" => 11.04,
+            "date" => "2017-06-13T14:37:24.123",
+            "status" => "Success"
+    ]);
         $I->canSeeResponseCodeIs(201);
         $I->seeResponseIsJson();
         $I->comment('The POST request was sent to Elastic Search!');
