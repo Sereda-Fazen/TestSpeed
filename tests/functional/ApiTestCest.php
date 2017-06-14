@@ -29,7 +29,7 @@ class ApiCest
 //        $I->seeResponseIsJson();
 
         $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
-        $I->sendPUT('alex_index/alex_test?pretty', [
+        $I->sendPUT('alex_index/alex_test/1?pretty', [
             'user' => 'alex',
             "post_date" => date("Y-m-d H:i:s"),
             "message" => addslashes($json_data)]);
