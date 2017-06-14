@@ -17,19 +17,30 @@ class ApiCest
 
         $I->sendPUT('alex_index?pretty=true', [
 
-            'settings' => [
-                'index' => [
-                    'number_of_shards' => 1,
-                    'number_of_replicas' => 0
-                ],
-                "_timestamp" => date("Y-m-d H:i:s"),
+
+          "settings"=> [
+                "number_of_replicas"=> 1,
+            "number_of_shards"=> 3,
+            "analysis"=> [],
+            "refresh_interval"=> "1s"
+          ],
+          "mappings"=> [
+                "my_type_name" => [
+                    "properties"=> [
+                        "title"=> [
+                            "type"=> "text",
+                  "analyzer"=> "english"
+                ]
+              ]
             ]
+          ]
+
 
         ]);
 //
 //
-//        $I->seeResponseCodeIs(200);
-//        $I->seeResponseIsJson();
+        $I->seeResponseCodeIs(200);
+        $I->seeResponseIsJson();
 
 //        $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
 //        $I->sendPUT('alex_index/alex_test/1?pretty', [
