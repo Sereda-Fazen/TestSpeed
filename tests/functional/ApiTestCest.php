@@ -15,16 +15,17 @@ class ApiCest
         $I->sendDELETE('alex_index', []);
 
 
-//        $I->sendPUT('alex_index?pretty=true', [
-//
-//            'settings' => [
-//                'index' => [
-//                    'number_of_shards' => 1,
-//                    'number_of_replicas' => 0
-//                ]
-//            ]
-//
-//        ]);
+        $I->sendPUT('alex_index?pretty=true', [
+
+            'settings' => [
+                'index' => [
+                    'number_of_shards' => 1,
+                    'number_of_replicas' => 0
+                ],
+                "_timestamp" => date("Y-m-d H:i:s"),
+            ]
+
+        ]);
 //
 //
 //        $I->seeResponseCodeIs(200);
