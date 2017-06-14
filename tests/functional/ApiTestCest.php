@@ -37,7 +37,7 @@ class ApiCest
         $I->sendPOST('alex1/alex_test/1?pretty', [
             'user' => 'alex',
             "timestamp" =>  ["type"=>  "date",
-                            "format"=> "yyyy-MM-dd"],
+                            "format"=> "2017-06-14"],
             "message" => addslashes($json_data)]);
         $I->canSeeResponseCodeIs(201);
         $I->seeResponseIsJson();
