@@ -13,7 +13,7 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
        // $I->sendDELETE('alex1', []);
-        $I->sendPUT('alex22?pretty', [
+        $I->sendPUT('alex222?pretty', [
 
           "mappings" => [
                 "alex_test" => [
@@ -33,7 +33,7 @@ class ApiCest
         $I->seeResponseIsJson();
 
         $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
-        $I->sendPOST('alex22/alex_test/1?pretty', [
+        $I->sendPOST('alex222/alex_test/1?pretty', [
             'user' => 'alex',
             "timestamp" => substr(date('Y-m-d\TH:i:s.u'), 0, -3) . 'Z',
             "message" => addslashes($json_data)]);
