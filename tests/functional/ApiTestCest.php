@@ -22,6 +22,7 @@ class ApiCest
             "analysis"=> [],
             "refresh_interval"=> "1s"
           ],
+            
           "mappings"=> [
                 "my_type_name" => [
                     "properties"=> [
