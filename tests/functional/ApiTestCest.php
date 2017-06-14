@@ -13,7 +13,7 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
 
-        $I->sendDELETE('alex_test_index1/', [
+        $I->sendDELETE('alex_test_index_1/', [
 
 //            'index' => 'my_index',
 //            'body' => [
