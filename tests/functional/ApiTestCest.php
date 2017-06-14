@@ -12,28 +12,40 @@ class ApiCest
 
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
-//        $I->sendDELETE('alex_alex_index', []);
-        $I->sendPUT('alex_alex_index3?pretty', [
-
-            "settings" => [
-                "number_of_shards" => 1
-        ],
-        ]);
-
-
-        $I->seeResponseCodeIs(200);
-        $I->seeResponseIsJson();
+        $I->sendDELETE('alex_alex_index', []);
+        $I->sendDELETE('alex_alex_index2', []);
+        $I->sendDELETE('alex_alex_index3', []);
+        $I->sendDELETE('alex_alex_index4', []);
+        $I->sendDELETE('alex_alex_finale', []);
+//        $I->sendPUT('alex1?pretty', [
 //
-        $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
-        $I->sendPUT('alex_alex_index3/alex_test/1?pretty', [
-            'user' => 'alex',
-            "timestamp" => ["type"=>"date",
-               "format"=> date("Y-m-d H:i:s")],
-            "message" => addslashes($json_data),
-            ]);
-        $I->canSeeResponseCodeIs(201);
-        $I->seeResponseIsJson();
-        $I->comment('The PUT request was sent to Elastic Search!');
+//           [
+//          "mappings" => [
+//                "alex_test" => [
+//                    "properties" => [
+//                        "timestamp" => [
+//                            "type"=> "date"
+//                ]
+//              ]
+//    ]
+//  ]
+//
+//        ],
+//        ]);
+//
+//
+//        $I->seeResponseCodeIs(200);
+//        $I->seeResponseIsJson();
+////
+//        $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
+//        $I->sendPUT('alex1/alex_test/1?pretty', [
+//            'user' => 'alex',
+//            "timestamp" => date("Y-m-d H:i:s"),
+//            "message" => addslashes($json_data)
+//            ]);
+//        $I->canSeeResponseCodeIs(201);
+//        $I->seeResponseIsJson();
+//        $I->comment('The PUT request was sent to Elastic Search!');
 //
 
 
