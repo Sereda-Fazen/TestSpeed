@@ -18,8 +18,6 @@ class ApiCest
           "settings"=> [
                 "number_of_replicas"=> 1,
             "number_of_shards"=> 1,
-            "analysis"=> [],
-            "refresh_interval"=> "1s"
           ],
 
             "mappings"=> [
@@ -30,13 +28,6 @@ class ApiCest
 
             ],
 
-
-                    "properties"=> [
-                        "title"=> [
-                            "type"=> "text",
-                  "analyzer"=> "english"
-                ]
-              ]
             ]
         ]);
 
