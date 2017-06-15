@@ -35,9 +35,9 @@ class ApiCest
 
         $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
         $array = json_decode($json_data, TRUE );
-      
-        $I->sendPOST('alex/alex_type/1?pretty', [
-            $array]);
+
+        $I->sendPOST('alex/alex_type/1?pretty',
+            $array);
         $I->canSeeResponseCodeIs(201);
         $I->seeResponseIsJson();
         $I->comment('The POST request was sent to Elastic Search!');
