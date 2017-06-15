@@ -12,32 +12,32 @@ class ApiCest
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
 //        $I->sendDELETE('alex212', []);
+//
+//
+//
+//        $I->sendPUT('alex?pretty', [
+//
+//          "mappings" => [
+//                "alex_test" => [
+//                    "properties" => [
+//                        "date" => [
+//                            "type" => "date"
+//                ]
+//              ]
+//    ]
+//
+//
+//        ],
+//        ]);
 
-
-
-        $I->sendPUT('alex?pretty', [
-
-          "mappings" => [
-                "alex_test" => [
-                    "properties" => [
-                        "date" => [
-                            "type" => "date"
-                ]
-              ]
-    ]
-
-
-        ],
-        ]);
-
-        $I->seeResponseCodeIs(200);
-        $I->seeResponseIsJson();
+//        $I->seeResponseCodeIs(200);
+//        $I->seeResponseIsJson();
 
         $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
         $array = json_decode($json_data);
       
-        $I->sendPUT('alex/alex_type/1?pretty', [
-            addslashes($array)]);
+        $I->sendPOST('alex/alex_type/1?pretty', [
+            $array]);
         $I->canSeeResponseCodeIs(201);
         $I->seeResponseIsJson();
         $I->comment('The POST request was sent to Elastic Search!');
