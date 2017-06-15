@@ -11,7 +11,7 @@ class ApiCest
     {
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
-//        $I->sendDELETE('alex212', []);
+        $I->sendDELETE('alex', []);
 //
 //
 //
@@ -33,16 +33,16 @@ class ApiCest
 //        $I->seeResponseCodeIs(200);
 //        $I->seeResponseIsJson();
 
-        $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
-        $array = json_decode($json_data, TRUE );
-        foreach ($array as $post) {
-            $I->sendPOST('alex/alex_type/1',
-                $post);
-            $I->canSeeResponseCodeIs(201);
-            $I->seeResponseIsJson();
-        }
-        $I->comment('The POST request was sent to Elastic Search!');
-
+//        $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
+//        $array = json_decode($json_data, TRUE );
+//        foreach ($array as $post) {
+//            $I->sendPOST('alex/alex_type/1',
+//                $post);
+//            $I->canSeeResponseCodeIs(201);
+//            $I->seeResponseIsJson();
+//        }
+//        $I->comment('The POST request was sent to Elastic Search!');
+//
 
 
 
