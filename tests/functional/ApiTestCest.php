@@ -11,7 +11,7 @@ class ApiCest
     {
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
-        $I->sendDELETE('alex212', []);
+        //$I->sendDELETE('alex212', []);
 
 
 
