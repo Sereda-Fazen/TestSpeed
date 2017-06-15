@@ -1,22 +1,422 @@
 [
     {
-        "host": "Bdub",
-        "dashboard": 2.64,
-        "content": 5.47,
-        "product": 9.14,
-        "insight": 4.49,
-        "total_time": 21.74,
-        "date": "2017-06-15T10:20:11.000Z",
+        "host": "Walmart-furniture",
+        "dashboard": 2.85,
+        "content": 3.27,
+        "product": 3.79,
+        "insight": 3.07,
+        "total_time": 12.98,
+        "date": "2017-06-15T10:45:54.000Z",
+        "status": "Success"
+    },
+    {
+        "host": "Acosta",
+        "dashboard": 7.25,
+        "content": 5.73,
+        "product": 6.6,
+        "insight": 3.26,
+        "total_time": 22.84,
+        "date": "2017-06-15T10:46:39.000Z",
         "status": "Load is too long"
     },
     {
         "host": "Americantextile",
-        "dashboard": 2.64,
-        "content": 11.8,
-        "product": 5.88,
-        "insight": 2.93,
-        "total_time": 23.25,
-        "date": "2017-06-15T10:20:53.000Z",
+        "dashboard": 2.53,
+        "content": 11.22,
+        "product": 4.53,
+        "insight": 3.08,
+        "total_time": 21.36,
+        "date": "2017-06-15T10:47:07.000Z",
         "status": "Load is too long"
+    },
+    {
+        "host": "Bdub",
+        "dashboard": 4.27,
+        "content": 5.3,
+        "product": 4.26,
+        "insight": 2.42,
+        "total_time": 16.25,
+        "date": "2017-06-15T10:47:39.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Bemis",
+        "dashboard": 3.45,
+        "content": 3.41,
+        "product": 3.97,
+        "insight": 1.87,
+        "total_time": 12.7,
+        "date": "2017-06-15T10:48:05.000Z",
+        "status": "Success"
+    },
+    {
+        "host": "Bic",
+        "dashboard": 2.85,
+        "content": 10.72,
+        "product": 9.99,
+        "insight": 2.66,
+        "total_time": 26.22,
+        "date": "2017-06-15T10:48:37.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Brother",
+        "dashboard": 3.19,
+        "content": 5.91,
+        "product": 5.15,
+        "insight": 3.05,
+        "total_time": 17.3,
+        "date": "2017-06-15T10:49:01.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Cars",
+        "dashboard": 1.08,
+        "content": 11.36,
+        "product": 37.26,
+        "insight": 21.03,
+        "total_time": 70.73,
+        "date": "2017-06-15T10:50:25.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Cheyenne",
+        "dashboard": 2.37,
+        "content": 5.75,
+        "product": 7.76,
+        "insight": 3.71,
+        "total_time": 19.59,
+        "date": "2017-06-15T10:50:52.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Coleman",
+        "dashboard": 3.67,
+        "content": 10.48,
+        "product": 5.45,
+        "insight": 2.89,
+        "total_time": 22.49,
+        "date": "2017-06-15T10:51:23.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Colgate",
+        "dashboard": 3.9,
+        "content": 5.3,
+        "product": 7.47,
+        "insight": 3.83,
+        "total_time": 20.5,
+        "date": "2017-06-15T10:51:58.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Crayola",
+        "dashboard": 2.59,
+        "content": 12.32,
+        "product": 6.74,
+        "insight": 3.29,
+        "total_time": 24.94,
+        "date": "2017-06-15T10:52:31.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Badgerbasket",
+        "dashboard": 4.2,
+        "content": 3.14,
+        "product": 6.01,
+        "insight": 2.32,
+        "total_time": 15.67,
+        "date": "2017-06-15T10:52:56.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Crazart",
+        "dashboard": 3.24,
+        "content": 6.32,
+        "product": 4.68,
+        "insight": 2.5,
+        "total_time": 16.74,
+        "date": "2017-06-15T10:53:19.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "David",
+        "dashboard": 2.07,
+        "content": 9.46,
+        "product": 4.22,
+        "insight": 3.17,
+        "total_time": 18.92,
+        "date": "2017-06-15T10:53:44.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Dole",
+        "dashboard": 3.03,
+        "content": 10.7,
+        "product": 4.52,
+        "insight": 2.54,
+        "total_time": 20.79,
+        "date": "2017-06-15T10:54:12.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Educationalinsights",
+        "dashboard": 2.16,
+        "content": 8.82,
+        "product": 4.73,
+        "insight": 2.72,
+        "total_time": 18.43,
+        "date": "2017-06-15T10:54:37.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Emerson",
+        "dashboard": 3.09,
+        "content": 5.58,
+        "product": 4.45,
+        "insight": 2.74,
+        "total_time": 15.86,
+        "date": "2017-06-15T10:55:00.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Energizer",
+        "dashboard": 3.06,
+        "content": 9.15,
+        "product": 4.07,
+        "insight": 2.73,
+        "total_time": 19.01,
+        "date": "2017-06-15T10:55:28.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Enjoylife",
+        "dashboard": 4.41,
+        "content": 9.63,
+        "product": 4.03,
+        "insight": 2.84,
+        "total_time": 20.91,
+        "date": "2017-06-15T10:55:55.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Michael-sales",
+        "dashboard": 2.45,
+        "content": 4.56,
+        "product": 4.14,
+        "insight": 2.11,
+        "total_time": 13.26,
+        "date": "2017-06-15T10:56:21.000Z",
+        "status": "Success"
+    },
+    {
+        "host": "Groupm",
+        "dashboard": 2.03,
+        "content": 11.7,
+        "product": 73.92,
+        "insight": 2.87,
+        "total_time": 90.52,
+        "date": "2017-06-15T10:57:58.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Handcraft",
+        "dashboard": 2.28,
+        "content": 9.53,
+        "product": 3.93,
+        "insight": 2.42,
+        "total_time": 18.16,
+        "date": "2017-06-15T10:58:24.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Hormel",
+        "dashboard": 2.36,
+        "content": 3.95,
+        "product": 3.53,
+        "insight": 2.31,
+        "total_time": 12.15,
+        "date": "2017-06-15T10:58:50.000Z",
+        "status": "Success"
+    },
+    {
+        "host": "Hostess",
+        "dashboard": 2.64,
+        "content": 4.48,
+        "product": 4.23,
+        "insight": 2.69,
+        "total_time": 14.04,
+        "date": "2017-06-15T10:59:18.000Z",
+        "status": "Success"
+    },
+    {
+        "host": "Ideanuova",
+        "dashboard": 4.1,
+        "content": 4.87,
+        "product": 4.41,
+        "insight": 2.75,
+        "total_time": 16.13,
+        "date": "2017-06-15T10:59:46.000Z",
+        "status": "Success"
+    },
+    {
+        "host": "Jedi",
+        "dashboard": 4.82,
+        "content": 9.57,
+        "product": 5.34,
+        "insight": 2.41,
+        "total_time": 22.14,
+        "date": "2017-06-15T11:00:22.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Justplay",
+        "dashboard": 2.03,
+        "content": 10.63,
+        "product": 4.35,
+        "insight": 2.35,
+        "total_time": 19.36,
+        "date": "2017-06-15T11:00:53.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Kimberlyclark",
+        "dashboard": 3.25,
+        "content": 6.32,
+        "product": 4.58,
+        "insight": 2.13,
+        "total_time": 16.28,
+        "date": "2017-06-15T11:01:23.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Knex",
+        "dashboard": 3.11,
+        "content": 4.63,
+        "product": 4.17,
+        "insight": 2.64,
+        "total_time": 14.55,
+        "date": "2017-06-15T11:01:52.000Z",
+        "status": "Success"
+    },
+    {
+        "host": "Lego",
+        "dashboard": 2.96,
+        "content": 7.54,
+        "product": 12.95,
+        "insight": 2.99,
+        "total_time": 26.44,
+        "date": "2017-06-15T11:02:25.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Sales-peggy",
+        "dashboard": 4.01,
+        "content": 4.85,
+        "product": 9.42,
+        "insight": 2.38,
+        "total_time": 20.66,
+        "date": "2017-06-15T11:02:58.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Sales-brian",
+        "dashboard": 3.23,
+        "content": 4.31,
+        "product": 3.68,
+        "insight": 2.06,
+        "total_time": 13.28,
+        "date": "2017-06-15T11:03:25.000Z",
+        "status": "Success"
+    },
+    {
+        "host": "Sales-daveb",
+        "dashboard": 2.62,
+        "content": 4.42,
+        "product": 4.21,
+        "insight": 2.22,
+        "total_time": 13.47,
+        "date": "2017-06-15T11:03:53.000Z",
+        "status": "Success"
+    },
+    {
+        "host": "Levis",
+        "dashboard": 4.22,
+        "content": 5.54,
+        "product": 17.25,
+        "insight": 2.79,
+        "total_time": 29.8,
+        "date": "2017-06-15T11:04:29.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Levis1",
+        "dashboard": 3.81,
+        "content": 9.64,
+        "product": 13.64,
+        "insight": 8.18,
+        "total_time": 35.27,
+        "date": "2017-06-15T11:05:11.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Pepsico-test",
+        "dashboard": 2.67,
+        "content": 4.65,
+        "product": 3.52,
+        "insight": 2.4,
+        "total_time": 13.24,
+        "date": "2017-06-15T11:05:37.000Z",
+        "status": "Success"
+    },
+    {
+        "host": "Pepsico-demo",
+        "dashboard": 2.65,
+        "content": 4.44,
+        "product": 3.56,
+        "insight": 2.33,
+        "total_time": 12.98,
+        "date": "2017-06-15T11:06:02.000Z",
+        "status": "Success"
+    },
+    {
+        "host": "Loreal",
+        "dashboard": 4.5,
+        "content": 8.85,
+        "product": 8.84,
+        "insight": 3.02,
+        "total_time": 25.21,
+        "date": "2017-06-15T11:06:35.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Mattel",
+        "dashboard": 2.48,
+        "content": 11.14,
+        "product": 4.2,
+        "insight": 2.38,
+        "total_time": 20.2,
+        "date": "2017-06-15T11:07:03.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Merchants",
+        "dashboard": 2.7,
+        "content": 8.66,
+        "product": 4.03,
+        "insight": 11.86,
+        "total_time": 27.25,
+        "date": "2017-06-15T11:27:56.000Z",
+        "status": "Load is too long"
+    },
+    {
+        "host": "Monthly-dash",
+        "dashboard": 2.43,
+        "content": 3.03,
+        "product": 3.21,
+        "insight": 1.82,
+        "total_time": 10.49,
+        "date": "2017-06-15T11:28:17.000Z",
+        "status": "Success"
     }
 ]

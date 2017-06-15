@@ -11,7 +11,10 @@ class ApiCest
     {
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
-     //   $I->sendDELETE('alex', []);
+        $I->sendDELETE('alex', []);
+
+        $I->seeResponseCodeIs(200);
+        $I->seeResponseIsJson();
 
 
 
@@ -42,6 +45,9 @@ class ApiCest
             $I->seeResponseIsJson();
         }
         $I->comment('The POST request was sent to Elastic Search!');
+
+        file_put_contents(__DIR__ . '/../../servers/test.json', '');
+        $I->comment('The file was cleared!');
 
 
 

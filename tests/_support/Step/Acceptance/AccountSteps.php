@@ -36,11 +36,11 @@ class AccountSteps extends \AcceptanceTester
         $product = round((microtime(true) - $start), 2);
 
 
-        if ($product > 5 || $content > 5 || $insight > 5 || $dashboard > 5){
-            $status = 'Load is too long';
-        }
-        elseif($product > 10 || $content > 10 || $insight > 10 || $dashboard > 10) {
+        if($product > 10 || $content > 10 || $insight > 10 || $dashboard > 10) {
             $status = 'Critical load';
+        }
+        elseif($product > 5 || $content > 5 || $insight > 5 || $dashboard > 5){
+            $status = 'Load is too long';
         }
         else {
             $status = 'Success';
