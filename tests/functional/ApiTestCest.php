@@ -36,7 +36,7 @@ class ApiCest
         $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
         $array = json_decode($json_data, TRUE );
         foreach ($array as $post) {
-            $I->sendPOST('alex/alex_type/1',
+            $I->sendPOST('alex/alex_type/2',
                 $post);
             $I->canSeeResponseCodeIs(201);
             $I->seeResponseIsJson();
