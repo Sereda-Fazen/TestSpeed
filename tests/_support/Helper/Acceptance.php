@@ -132,7 +132,7 @@ class Acceptance extends \Codeception\Module
         $taskList = json_decode($file,TRUE);        // Декодировать в массив
         unset($file);                               // Очистить переменную $file
         $total_time = $dashboard + $content + $product_list + $insight_report;
-        $date = date("Y-m-d H:i:s");
+        $date = substr(date('Y-m-d\TH:i:s.u'), 0, -3) . 'Z';
         $taskList[] = array('host'=>$host, 'dashboard'=> $dashboard, 'content'=>$content, 'product'=>$product_list,
             'insight'=>$insight_report, 'total_time'=> $total_time, 'date'=> $date, 'status' => $status);        // Представить новую переменную как элемент массива, в формате 'ключ'=>'имя переменной'
         file_put_contents(__DIR__ .'/../../../servers/test.json',json_encode($taskList,JSON_PRETTY_PRINT));  // Перекодировать в формат и записать в файл.
