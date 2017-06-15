@@ -34,7 +34,7 @@ class ApiCest
 //        $I->seeResponseIsJson();
 
         $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
-        $array = json_decode($json_data);
+        $array = json_decode($json_data, TRUE );
       
         $I->sendPOST('alex/alex_type/1?pretty', [
             $array]);
