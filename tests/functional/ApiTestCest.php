@@ -10,30 +10,30 @@ class ApiCest
     {
         $I->amHttpAuthenticated('elastic', 'changeme');
         $I->haveHttpHeader('Content-Type', 'application/json');
-        $I->sendDELETE('alex', []);
+        //$I->sendDELETE('alex', []);
 
-        $I->seeResponseCodeIs(200);
-        $I->seeResponseIsJson();
-
-
-
-        $I->sendPUT('alex?pretty', [
-
-          "mappings" => [
-                "alex_test" => [
-                    "properties" => [
-                        "date" => [
-                            "type" => "date"
-                ]
-              ]
-    ]
-
-
-        ],
-        ]);
-
-        $I->seeResponseCodeIs(200);
-        $I->seeResponseIsJson();
+//        $I->seeResponseCodeIs(200);
+//        $I->seeResponseIsJson();
+//
+//
+//
+//        $I->sendPUT('alex?pretty', [
+//
+//          "mappings" => [
+//                "alex_test" => [
+//                    "properties" => [
+//                        "date" => [
+//                            "type" => "date"
+//                ]
+//              ]
+//    ]
+//
+//
+//        ],
+//        ]);
+//
+//        $I->seeResponseCodeIs(200);
+//        $I->seeResponseIsJson();
 
         $json_data = file_get_contents(__DIR__ . '/../../servers/test.json');
         $array = json_decode($json_data, TRUE );
