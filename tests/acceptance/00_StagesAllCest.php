@@ -11,19 +11,13 @@ class StageAllCest
     function walmartFurniture(\Step\Acceptance\AccountSteps $I)
     {
         $I->stepsSpeedTest('http://walmart-furniture.contentanalyticsinc.com','Walmart-furniture');
+
     }
-
-
-//        function thandwalton(\Step\Acceptance\AccountSteps $I)
-//        {
-//            $I->stepsSpeedTest('http://8thandwalton.contentanalyticsinc.com','Eightthandwalton');
-//        }
-
- 
-
+    
     function acosta(\Step\Acceptance\AccountSteps $I)
     {
         $I->stepsSpeedTest('http://acosta.contentanalyticsinc.com','Acosta');
+
     }
 
 
