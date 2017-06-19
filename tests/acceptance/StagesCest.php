@@ -25,10 +25,10 @@ class StagesCest
     /**
      * @env 8thandwalton
      */
-//        function thandwalton(\Step\Acceptance\AccountSteps $I)
-//        {
-//            $I->stepsSpeedTest('http://8thandwalton.contentanalyticsinc.com','Eightthandwalton');
-//        }
+        function thandwalton(\Step\Acceptance\AccountSteps $I)
+        {
+            $I->stepsSpeedTest('http://8thandwalton.contentanalyticsinc.com','Eightthandwalton');
+        }
 
     /**
      * @env acosta
