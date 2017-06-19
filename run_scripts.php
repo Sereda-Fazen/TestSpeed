@@ -1,7 +1,8 @@
+
 <?php
 
 
-$envs = ['walmart-furniture', 'acosta', 'americantextile'];
+$envs = ['walmart-furniture', '8thandwalton','acosta', 'americantextile', ''];
 
 foreach ($envs as $env) {
     system("codecept run -g stages --env $env");
