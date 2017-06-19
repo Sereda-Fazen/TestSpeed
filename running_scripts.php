@@ -5,8 +5,8 @@
 $envs = ['walmart-furniture', 'acosta', 'americantextile'];
 
 foreach ($envs as $env) {
-    exec("codecept run -g stages --env $env");
-    exec("codecept run -g api --debug");
+    system("codecept run -g stages --env $env");
+    system("codecept run -g api --debug");
 }
 
 ?>
